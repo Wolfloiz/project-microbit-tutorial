@@ -9,12 +9,9 @@
     },
     "files": [
         "README.md",
-        "main.blocks",
-        "main.ts"
+        "teste.md"
     ],
-    "testFiles": [
-        "test.ts"
-    ],
+    "testFiles": [],
     "public": true,
     "targetVersions": {
         "target": "8.0.18",
@@ -23,5 +20,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }
