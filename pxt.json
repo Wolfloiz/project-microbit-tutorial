@@ -1,24 +1,25 @@
 {
-    "name": "project-microbit-tutorial",
-    "version": "0.0.0",
-    "description": "",
-    "dependencies": {
-        "core": "*",
-        "radio": "*",
-        "microphone": "*"
-    },
-    "files": [
-        "README.md",
-        "teste.md"
-    ],
-    "testFiles": [],
-    "public": true,
-    "targetVersions": {
-        "target": "8.0.18",
-        "targetId": "microbit"
-    },
-    "supportedTargets": [
-        "microbit"
-    ],
-    "preferredEditor": "tsprj"
+  "name": "project-microbit-tutorial",
+  "version": "0.0.0",
+  "description": "",
+  "dependencies": {
+    "core": "*",
+    "radio": "*",
+    "microphone": "*"
+  },
+  "files": [
+    "README.md",
+    "teste.md",
+    "sm-1-book-sm-1-book-rob--semeador-step-coding-2.md"
+  ],
+  "testFiles": [],
+  "public": true,
+  "targetVersions": {
+    "target": "8.0.18",
+    "targetId": "microbit"
+  },
+  "supportedTargets": [
+    "microbit"
+  ],
+  "preferredEditor": "tsprj"
 }
