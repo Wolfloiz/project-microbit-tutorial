@@ -708,8 +708,292 @@ contagem = 10
 basic.showIcon(IconNames.SmallSquare)
 ```
 
-
 ## Passo 27
+
+Acesse a categoria ``||logic:Lógica||``, pegue a condicional ``||logic:se então||``
+e insira-a dentro do laço ``||basic:sempre||``. 
+Clique no botão **+** para criar mais uma condição ``||logic:senão se||``. 
+
+```blocks
+function seguir_linha () {
+    if (pins.digitalReadPin(DigitalPin.P1) == 1) {
+        actuators.SetSpeedMotor(0, OutputPorts.P12)
+        actuators.SetSpeedMotor(300, OutputPorts.P16)
+    } else {
+        actuators.SetSpeedMotor(300, OutputPorts.P12)
+        actuators.SetSpeedMotor(0, OutputPorts.P16)
+    }
+}
+input.onButtonPressed(Button.A, function () {
+    contagem_regressiva()
+})
+function contagem_regressiva () {
+    while (contagem > 0) {
+        basic.showNumber(contagem)
+        music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
+        basic.pause(1000)
+        contagem += -1
+    }
+    music.play(music.tonePlayable(262, music.beat(BeatFraction.Double)), music.PlaybackMode.UntilDone)
+    basic.showLeds(`
+        . . # . .
+        . # # # .
+        # # # # #
+        . # # # .
+        . # # # .
+        `)
+}
+input.onButtonPressed(Button.B, function () {
+    contagem = 10
+    basic.showIcon(IconNames.SmallSquare)
+})
+function parar () {
+    actuators.SetSpeedMotor(0, OutputPorts.P12)
+    actuators.SetSpeedMotor(0, OutputPorts.P16)
+}
+let contagem = 0
+actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P8)
+contagem = 10
+basic.showIcon(IconNames.SmallSquare)
+basic.forever(function () {
+    if (true) {
+    	
+    } else if (false) {
+    	
+    }
+})
+
+```
+## Passo 28
+
+Volte ao menu ``||logic:Lógica||``, pegue dois comparadores ``||logic:0 < 0||``
+e substitua as condições **verdadeiro** e **falso** da condicional.
+
+```blocks
+function seguir_linha () {
+    if (pins.digitalReadPin(DigitalPin.P1) == 1) {
+        actuators.SetSpeedMotor(0, OutputPorts.P12)
+        actuators.SetSpeedMotor(300, OutputPorts.P16)
+    } else {
+        actuators.SetSpeedMotor(300, OutputPorts.P12)
+        actuators.SetSpeedMotor(0, OutputPorts.P16)
+    }
+}
+input.onButtonPressed(Button.A, function () {
+    contagem_regressiva()
+})
+function contagem_regressiva () {
+    while (contagem > 0) {
+        basic.showNumber(contagem)
+        music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
+        basic.pause(1000)
+        contagem += -1
+    }
+    music.play(music.tonePlayable(262, music.beat(BeatFraction.Double)), music.PlaybackMode.UntilDone)
+    basic.showLeds(`
+        . . # . .
+        . # # # .
+        # # # # #
+        . # # # .
+        . # # # .
+        `)
+}
+input.onButtonPressed(Button.B, function () {
+    contagem = 10
+    basic.showIcon(IconNames.SmallSquare)
+})
+function parar () {
+    actuators.SetSpeedMotor(0, OutputPorts.P12)
+    actuators.SetSpeedMotor(0, OutputPorts.P16)
+}
+let contagem = 0
+actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P8)
+contagem = 10
+basic.showIcon(IconNames.SmallSquare)
+basic.forever(function () {
+    if (0 < 0) {
+    	
+    } else if (0 < 0) {
+    	
+    }
+})
+
+
+```
+
+## Passo 29
+
+Agora atualize os campos do primeiro comparador. Vá até a aba ``||variables:Variáveis||``,
+clique no bloco ``||variables:contagem||`` e troque o primeiro **0** do comparador. 
+Substitua o segundo **0** do comparador pelo valor **9**.
+Altere o sinal do comparador para **>**.
+
+```blocks
+function seguir_linha () {
+    if (pins.digitalReadPin(DigitalPin.P1) == 1) {
+        actuators.SetSpeedMotor(0, OutputPorts.P12)
+        actuators.SetSpeedMotor(300, OutputPorts.P16)
+    } else {
+        actuators.SetSpeedMotor(300, OutputPorts.P12)
+        actuators.SetSpeedMotor(0, OutputPorts.P16)
+    }
+}
+input.onButtonPressed(Button.A, function () {
+    contagem_regressiva()
+})
+function contagem_regressiva () {
+    while (contagem > 0) {
+        basic.showNumber(contagem)
+        music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
+        basic.pause(1000)
+        contagem += -1
+    }
+    music.play(music.tonePlayable(262, music.beat(BeatFraction.Double)), music.PlaybackMode.UntilDone)
+    basic.showLeds(`
+        . . # . .
+        . # # # .
+        # # # # #
+        . # # # .
+        . # # # .
+        `)
+}
+input.onButtonPressed(Button.B, function () {
+    contagem = 10
+    basic.showIcon(IconNames.SmallSquare)
+})
+function parar () {
+    actuators.SetSpeedMotor(0, OutputPorts.P12)
+    actuators.SetSpeedMotor(0, OutputPorts.P16)
+}
+let contagem = 0
+actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P8)
+contagem = 10
+basic.showIcon(IconNames.SmallSquare)
+basic.forever(function () {
+    if (contagem > 9) {
+    	
+    } else if (0 < 0) {
+    	
+    }
+})
+
+
+```
+
+## Passo 30
+
+Atualize os campos do segundo comparador. Vá até a aba ``||variables:Variáveis||``,
+clique no bloco ``||variables:contagem||`` e troque o primeiro **0** do comparador. 
+Substitua o segundo **0** do comparador pelo valor **1**.
+
+```blocks
+function seguir_linha () {
+    if (pins.digitalReadPin(DigitalPin.P1) == 1) {
+        actuators.SetSpeedMotor(0, OutputPorts.P12)
+        actuators.SetSpeedMotor(300, OutputPorts.P16)
+    } else {
+        actuators.SetSpeedMotor(300, OutputPorts.P12)
+        actuators.SetSpeedMotor(0, OutputPorts.P16)
+    }
+}
+input.onButtonPressed(Button.A, function () {
+    contagem_regressiva()
+})
+function contagem_regressiva () {
+    while (contagem > 0) {
+        basic.showNumber(contagem)
+        music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
+        basic.pause(1000)
+        contagem += -1
+    }
+    music.play(music.tonePlayable(262, music.beat(BeatFraction.Double)), music.PlaybackMode.UntilDone)
+    basic.showLeds(`
+        . . # . .
+        . # # # .
+        # # # # #
+        . # # # .
+        . # # # .
+        `)
+}
+input.onButtonPressed(Button.B, function () {
+    contagem = 10
+    basic.showIcon(IconNames.SmallSquare)
+})
+function parar () {
+    actuators.SetSpeedMotor(0, OutputPorts.P12)
+    actuators.SetSpeedMotor(0, OutputPorts.P16)
+}
+let contagem = 0
+actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P8)
+contagem = 10
+basic.showIcon(IconNames.SmallSquare)
+basic.forever(function () {
+    if (contagem > 9) {
+    	
+    } else if (contagem < 1) {
+    	
+    }
+})
+```
+
+## Passo 32
+
+No menu ``||functions:Funções||`` arraste o comando  ``||functions:ligar parar||``
+para dentro da condição ``||logic:se então||``. Depois pegue o bloco ``||functions:contagem_regressiva||`` e coloque-o
+dentro da condição ``||logic:senão se então||``.
+
+```blocks
+function seguir_linha () {
+    if (pins.digitalReadPin(DigitalPin.P1) == 1) {
+        actuators.SetSpeedMotor(0, OutputPorts.P12)
+        actuators.SetSpeedMotor(300, OutputPorts.P16)
+    } else {
+        actuators.SetSpeedMotor(300, OutputPorts.P12)
+        actuators.SetSpeedMotor(0, OutputPorts.P16)
+    }
+}
+input.onButtonPressed(Button.A, function () {
+    contagem_regressiva()
+})
+function contagem_regressiva () {
+    while (contagem > 0) {
+        basic.showNumber(contagem)
+        music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
+        basic.pause(1000)
+        contagem += -1
+    }
+    music.play(music.tonePlayable(262, music.beat(BeatFraction.Double)), music.PlaybackMode.UntilDone)
+    basic.showLeds(`
+        . . # . .
+        . # # # .
+        # # # # #
+        . # # # .
+        . # # # .
+        `)
+}
+input.onButtonPressed(Button.B, function () {
+    contagem = 10
+    basic.showIcon(IconNames.SmallSquare)
+})
+function parar () {
+    actuators.SetSpeedMotor(0, OutputPorts.P12)
+    actuators.SetSpeedMotor(0, OutputPorts.P16)
+}
+let contagem = 0
+actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P8)
+contagem = 10
+basic.showIcon(IconNames.SmallSquare)
+basic.forever(function () {
+    if (contagem > 9) {
+        parar()
+    } else if (contagem < 1) {
+        contagem_regressiva()
+    }
+})
+
+```
+
+## Passo 33
 
 Agora seu código está pronto! Baixe-o para o micro:bit e teste-o.
 Pressione o botão "A" do micro:bit e aguarde a contagem regressiva. Observe se o ônibus espacial seguirá a trajetória determinada. 
@@ -718,7 +1002,7 @@ Use o botão "B" do micro:bit para interromper a viagem e redefinir o contador.
 ```
 
 
-## Passo 28
+## Passo 34
 Se necessário, confira o seu código clicando na lâmpada de dica.
 
 ```blocks
@@ -762,6 +1046,13 @@ let contagem = 0
 actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P8)
 contagem = 10
 basic.showIcon(IconNames.SmallSquare)
+basic.forever(function () {
+    if (contagem > 9) {
+        parar()
+    } else if (contagem < 1) {
+        contagem_regressiva()
+    }
+})
 
 ```
 
