@@ -723,7 +723,7 @@ basic.showIcon(IconNames.Square)
 
 Agora seu código está pronto! Baixe-o para o micro:bit e teste-o.
 Acesse a url "https://aula.fuzzymakers.com.br/microbit/joystick" para utilizar o controle depois de conectá-lo com o micro:bit.
-“Os botões A, B, C e D movem o robô; o A move o robô para a frente, o B para a esquerda, o C para a direita e o D para trás.”
+"Os botões A, B, C e D movem o robô; o A move o robô para a frente, o B para a esquerda, o C para a direita e o D para trás."
 ```blocks
 ```
 
@@ -776,6 +776,7 @@ basic.showIcon(IconNames.Square)
 
 ```package
 radio=remove
+ws2812b=remove
 bluetooth
 fuzzyBot=github:FuzzyMakers/pxt-fuzzyMakers
 ```
