@@ -72,12 +72,13 @@
     "robo-pintor-robo-pintor-step-coding-3.md",
     "sm-6-y-2-bimester-sm-6-y-2-bimester-imulacao-de-erremotos-step-intro-2.md",
     "fm-7-y-2-bimester-guindaste-fm-7-y-2-bimester-uindaste-step-coding-2.md",
-    "futebol-futebol-step-coding-3.md"
+    "futebol-futebol-step-coding-3.md",
+    "calibrando-o-fuzzybot-calibrando-o-fuzzybot-step-coding-2.md"
   ],
   "testFiles": [],
   "public": true,
   "targetVersions": {
-    "target": "8.0.18",
+    "target": "8.0.22",
     "targetId": "microbit"
   },
   "supportedTargets": [
