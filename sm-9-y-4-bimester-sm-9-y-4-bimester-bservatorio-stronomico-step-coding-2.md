@@ -1,13 +1,9 @@
 ### @diffs true
-# Alerta de asteroides
+# Observatório astronômico
 
 ## Passo 1
-Neste tutorial, vamos programar um satélite em órbita que patrulha o espaço 
-em busca de asteroides. A matriz de LEDs do micro:bit indicará o ponto que o “satélite” 
-percorre, enquanto um sensor analógico 
-monitora a presença de objetos. Ao detectar algo, o micro:bit exibirá um alerta 
-visual e emitirá um aviso sonoro.
-
+Neste tutorial, vamos carregar os dados das posições das constelações para um telescópio.
+Usaremos a bússola do micro:bit e o potenciômetro para simular a direção que o telescópio aponta, assim poderemos verificar a constelação visualizada no momento.
 
 ## Passo 2
 Para começar, verifique se a biblioteca da Smart Makers já está importada 
@@ -16,1381 +12,757 @@ copie o endereço "https://github.com/FuzzyMakers/pxt-smartMakers",
 cole-o no campo de pesquisa da janela que se abriu e selecione a biblioteca. 
 
 ## Passo 3
-Acesse o menu ``||variables:Variáveis||`` e clique em 
-**"Fazer uma variável..."**. Crie uma variável chamada
-``||variables:bateria||``. Em seguida, arraste o bloco ``||variables:definir bateria para 0||`` 
-para o bloco ``||basic:no iniciar||``.
-Refaça o mesmo processo anterior para criar e definir mais duas variáveis: ``||variables:x||`` e ``||variables:y||``.
+Clique em **Avançado** para abrir novas categorias. Clique em ``||smart:Smart||``
+e arraste o comando ``||smart:Definir constelações||`` para dentro do bloco ``||basic:no iniciar||``.
 
 ```blocks
-let bateria = 0
-let x = 0
-let y = 0
+Smart.startConstellation()
 ```
 
 ## Passo 4
-Acerte os valores das variáveis ``||variables:bateria||``, ``||variables:x||``
-respectivamente para **30** e **3**.
+Acesse a categoria ``||logic:Lógica||``, pegue a condicional ``||logic:se então senão||``
+e insira-a dentro do laço ``||basic:sempre||``. 
+
 
 ```blocks
-let bateria = 30
-let x = 3
-let y = 0
+Smart.startConstellation()
+basic.forever(function () {
+    if (true) {
+    	
+    } else {
+    	
+    }
+})
 
 ```
 
 ## Passo 5
 
-
-No menu ``||actuators:Atuadores||`` busque o bloco ``||actuators:Motor CC, definir velocidade 0 na porta P8||`` e adicione-o
-dentro do ``||basic:no iniciar||``.
-Mude o valor da velocidade para **400** e a porta para ``||actuators:P12||``.
-
+Volte ao menu ``||logic:Lógica||``, pegue o comparador ``||logic:0 = 0||``
+e substitua a condição **verdadeiro** da condicional.
 
 ```blocks
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
-
-```
-
-## Passo 6
-Clique no menu ``||Advanced:Avançado||``, acesse ``||Functions:Funções||`` e 
-clique em **Fazer uma função...**.
-Clique no campo editável do laço azul para criar uma função chamada 
-``||functions:atualizar_posição||``. 
-Um novo laço referente à função criada é adicionado automaticamente à área de programação.
-
-
-
-```blocks
-function atualizar_posição () {
-	
-}
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
-```
-
-## Passo 7
-Acesse a categoria ``||logic:Lógica||``, pegue a condicional ``||logic:se então senão||``
-e insira-a dentro da função ``||functions:atualizar_posição||``. 
-Clique no botão **+** **três** vezes para criar outras condições
-``||logic:senão se então||``.
-
-```blocks
-function atualizar_posição () {
-    if (true) {
-    	
-    } else if (false) {
-    	
-    } else if (false) {
-    	
-    } else if (false) {
+Smart.startConstellation()
+basic.forever(function () {
+    if (0 == 0) {
     	
     } else {
     	
     }
-}
-let bateria = 30
-let x = 3
+})
+```
+
+## Passo 6
+Agora atualize os campos do comparador. Vá até a aba ``||sensors:Sensores||``,
+clique no bloco ``||sensors:Valor do Botão na porta P2||`` e troque 
+o primeiro **0** do comparador. 
+Mude a porta de ``||sensors:P2||`` para ``||sensors:P0||``.
+
+```blocks
+Smart.startConstellation()
+basic.forever(function () {
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+    	
+    } else {
+    	
+    }
+})
+
+```
+
+## Passo 7
+Acesse o menu ``||variables:Variáveis||`` e clique em 
+**"Fazer uma variável..."**. Crie uma variável chamada
+``||variables:y||``. Em seguida, arraste o bloco ``||variables:definir y para 0||`` 
+para dentro do ``||logic:então||``.
+
+
+```blocks
 let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
+Smart.startConstellation()
+basic.forever(function () {
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = 0
+    } else {
+    	
+    }
+})
 ```
 
 ## Passo 8
 
-Volte ao menu ``||logic:Lógica||``, selecione o operador booleano ``||logic: e ||``
-e substitua a condição **verdadeiro** da primeira condicional.
+Acesse a categoria ``||math:Matemática||``, pegue o comando ``||math:arredonda 0||``
+para colocar no valor de definição da variável.
 ```blocks
-function atualizar_posição () {
-    if (false && false) {
-    	
-    } else if (false) {
-    	
-    } else if (false) {
-    	
-    } else if (false) {
-    	
+let y = 0
+Smart.startConstellation()
+basic.forever(function () {
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = Math.round(0)
     } else {
     	
     }
-}
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
-
+})
 ```
 
 ## Passo 9
-Ainda na categoria ``||logic:Lógica||``, pegue **dois** comparadores ``||logic: 0 = 0||``
-para colocar nos campos vazios do operador booleano.
-Modifique o sinal do segundo comparador para **!=** (diferente).
-
+Volte à seção ``||math:Matemática||`` e selecione o comando ``||math:map 0 from low 0 high 1023 to low 0 high 4||``.
+Substitua o **0** de ``||math:arredonda 0||`` por esse novo bloco.
 ```blocks
-function atualizar_posição () {
-    if (0 == 0 && 0 != 0) {
-    	
-    } else if (false) {
-    	
-    } else if (false) {
-    	
-    } else if (false) {
-    	
+let y = 0
+Smart.startConstellation()
+basic.forever(function () {
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = Math.round(Math.map(0, 0, 1023, 0, 4))
     } else {
     	
     }
-}
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
+})
+
 ```
 
 ## Passo 10
-Agora atualize os campos dos comparadores.
-Pegue a variável ``||variables:y||``  para colocá-la no primeiro campo do primeiro comparador.
-No segundo campo do primeiro comparador, mantenha o valor **0**.
-Volte até a aba ``||variables:Variáveis||``,
-troque o primeiro **0** do segundo comparador por ``||variables:x||`` e o segundo por **4**.
-
+Atualize os valores do ``||math:map||``.
+Volte ao menu ``||sensors:Sensores||``, pegue o bloco ``||sensors:Valor do potenciômetro na porta P2||`` e troque
+o primeiro campo **0** do mapeamento.
+Mude a porta de ``||sensors:P2||`` para ``||sensors:P1||``.
+O úlitmo valor do mapeamento deve ser editado de **4** para **90**.
 ```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-    	
-    } else if (false) {
-    	
-    } else if (false) {
-    	
-    } else if (false) {
-    	
+let y = 0
+Smart.startConstellation()
+basic.forever(function () {
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = Math.round(Math.map(sensors.dimmerValue(InputPorts.P1), 0, 1023, 0, 90))
     } else {
     	
     }
-}
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
+})
+
 ```
 
 
 ## Passo 11
-Acesse mais uma vez a seção ``||variables:Variáveis||``, pegue o comando
-``||variables:Alterar y por 1||`` e posicione-o no primeiro ``||logic:se então||``.
-Modifique a variável de ``||variables:y||`` para ``||variables:x||``.
+Acesse a aba ``||actuators:Atuadores||`` e posicione o bloco ``||actuators:Servo, definir posição 0 porta P8 modo Knob||`` 
+abaixo do último comando adicionado.
 
 ```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (false) {
-    	
-    } else if (false) {
-    	
-    } else if (false) {
-    	
+let y = 0
+Smart.startConstellation()
+basic.forever(function () {
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = Math.round(Math.map(sensors.dimmerValue(InputPorts.P1), 0, 1023, 0, 90))
+        actuators.SetAngleServoKnob(0, OutputPorts.P8)
     } else {
     	
     }
-}
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
+})
 ```
 
 ## Passo 12
 
-Duplique toda a operação booleana e coloque-a no lugar da primeira condição **falso**.
-Altere o primeiro comparador para ``||logic:x=4||`` e o segundo para ``||logic:y!=4||`` .
-
+Duplique o bloco ``||sensors:Valor do potenciômetro na porta P1||`` e coloque-o no valor da posição do servo.
 ```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-    	
-    } else if (false) {
-    	
-    } else if (false) {
-    	
+let y = 0
+Smart.startConstellation()
+basic.forever(function () {
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = Math.round(Math.map(sensors.dimmerValue(InputPorts.P1), 0, 1023, 0, 90))
+        actuators.SetAngleServoKnob(sensors.dimmerValue(InputPorts.P1), OutputPorts.P8)
     } else {
     	
     }
-}
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
+})
 ```
 
 ## Passo 13
 
-Acesse mais uma vez a seção ``||variables:Variáveis||``, pegue o comando
-``||variables:Alterar y por 1||`` e posicione-o no primeiro ``||logic:senão se então||``.
+Acesse o menu ``||variables:Variáveis||`` e clique em 
+**"Fazer uma variável..."**. Crie uma variável chamada
+``||variables:x||``. Em seguida, arraste o bloco ``||variables:definir x para 0||`` 
+para a condicional ``||logic:senão||``.
 
 ```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (false) {
-    	
-    } else if (false) {
-    	
-    } else {
-    	
-    }
-}
-let bateria = 30
-let x = 3
+let x = 0
 let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
-
-
+Smart.startConstellation()
+basic.forever(function () {
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = Math.round(Math.map(sensors.dimmerValue(InputPorts.P1), 0, 1023, 0, 90))
+        actuators.SetAngleServoKnob(sensors.dimmerValue(InputPorts.P1), OutputPorts.P8)
+    } else {
+        x = 0
+    }
+})
 ```
 
 
 ## Passo 14
 
-Duplique novamente toda a operação booleana e coloque-a no lugar da segunda condição **falso**.
-Altere o primeiro comparador para ``||logic:y=4||`` e o segundo para ``||logic:x!=0||`` .
+Acesse a categoria ``||math:Matemática||``, pegue o comando ``||math:arredonda 0||``
+para colocar no valor da definição da variável.
 ```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-    	
-    } else if (false) {
-    	
-    } else {
-    	
-    }
-}
-let bateria = 30
-let x = 3
+let x = 0
 let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
+Smart.startConstellation()
+basic.forever(function () {
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = Math.round(Math.map(sensors.dimmerValue(InputPorts.P1), 0, 1023, 0, 90))
+        actuators.SetAngleServoKnob(sensors.dimmerValue(InputPorts.P1), OutputPorts.P8)
+    } else {
+        x = Math.round(0)
+    }
+})
 
 ```
 
 ## Passo 15
+Vá ao menu ``||input:Entrada||`` e selecione o bloco ``||input:direção da bússola (°)||`` 
+para substituir o valor **0** do bloco ``||math:arredonda||``.
 
-Copie o comando ``||variables:Alterar x por 1||`` e cole-o dentro da condicional.
-Altere o valor de **1** para **-1**.
 ```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (false) {
-    	
-    } else {
-    	
-    }
-}
-let bateria = 30
-let x = 3
+let x = 0
 let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
-
+Smart.startConstellation()
+basic.forever(function () {
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = Math.round(Math.map(sensors.dimmerValue(InputPorts.P1), 0, 1023, 0, 90))
+        actuators.SetAngleServoKnob(sensors.dimmerValue(InputPorts.P1), OutputPorts.P8)
+    } else {
+        x = Math.round(input.compassHeading())
+    }
+})
 ```
 
 ## Passo 16
 
-Pela última vez duplique toda a operação booleana e coloque-a no lugar da última condição **falso**.
-Altere o primeiro comparador para ``||logic:x=0||`` e o segundo para ``||logic:y!=0||`` .
+Acesse a categoria ``||logic:Lógica||``, pegue a condicional ``||logic:se então senão||``
+e insira-o abaixo do último comando adicionado. 
+
 ```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-    	
+let x = 0
+let y = 0
+Smart.startConstellation()
+basic.forever(function () {
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = Math.round(Math.map(sensors.dimmerValue(InputPorts.P1), 0, 1023, 0, 90))
+        actuators.SetAngleServoKnob(sensors.dimmerValue(InputPorts.P1), OutputPorts.P8)
     } else {
-    	
-    }
-}
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
-
-
-```
-
-## Passo 17
-
-Copie o comando ``||variables:Alterar y por 1||`` e cole-o dentro da condicional.
-Altere o valor de **1** para **-1**.
-
-```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    } else {
-    	
-    }
-}
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
-```
-
-## Passo 18
-
-Clique no botão **-** da condição ``||logic:senão -||`` para removê-la.
-
-```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-}
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
-```
-
-## Passo 19
-
-Na categoria ``||basic:Básico||``, arraste uma pausa ``||basic:pausa (ms) 100||`` para o código,
-depois, acesse o menu ``||math:Matemática||`` e pegue uma operação de multiplicação ``||math:0 x 0||`` para preencher o valor da pausa.
-
-```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-    basic.pause(0 * 0)
-}
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
-
-```
-
-## Passo 20
-
-Atualize os campos da multiplicação para **9.5** e **62.5**.
-```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-    basic.pause(9.5 * 62.5)
-}
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
-```
-
-## Passo 21
-
-Clique no menu ``||Advanced:Avançado||``, acesse ``||Functions:Funções||`` e 
-clique em **Fazer uma função...**.
-Clique no campo editável do laço azul para criar uma função chamada 
-``||functions:carregar||``. 
-Um novo laço referente à função criada é adicionado automaticamente à área de programação.
-```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-    basic.pause(9.5 * 62.5)
-}
-function carregar () {
-	
-}
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
-
-
-```
-## Passo 22
-
-Acesse a categoria ``||logic:Lógica||``, clique na condicional ``||logic:se então||``
-e insira-a dentro da função ``||functions:carregar||``.
-
-```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-    basic.pause(9.5 * 62.5)
-}
-function carregar () {
-    if (true) {
-    	
-    }
-}
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
-```
-
-## Passo 23
-
-Volte ao menu ``||logic:Lógica||``, selecione o operador booleano ``||logic: e ||``
-e substitua a condição **verdadeiro** da condicional.
-
-```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-    basic.pause(9.5 * 62.5)
-}
-function carregar () {
-    if (false && false) {
-    	
-    }
-}
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
-
-```
-## Passo 24
-
-Ainda na categoria ``||logic:Lógica||``, pegue **dois** comparadores ``||logic: 0 < 0||``
-para colocar nos campos vazios do operador booleano.
-Modifique o sinal do segundo comparador para **>=**.
-
-```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-    basic.pause(9.5 * 62.5)
-}
-function carregar () {
-    if (0 < 0 && 0 >= 0) {
-    	
-    }
-}
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
-```
-
-## Passo 25
-
-Agora atualize os campos dos comparadores.
-Pegue a variável ``||variables:bateria||``  para colocá-la no primeiro campo do primeiro comparador.
-Edite o segundo campo do primeiro comparador de **0** para **100**.
-Vá até a aba ``||input:Entrada||``,
-troque o primeiro **0** do segundo comparador por ``||input:nível de luz||`` e o segundo por **60**.
-
-
-```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-    basic.pause(9.5 * 62.5)
-}
-function carregar () {
-    if (bateria < 100 && input.lightLevel() >= 60) {
-    	
-    }
-}
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
-```
-
-## Passo 26
-
-Retorne ao menu ``||variables:Variáveis||`` e arraste o comando
-``||variables:alterar y por 1||`` para a condicional. 
-Modifique a variável ``||variables:y||`` por ``||variables:bateria||``.
-
-
-```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-    basic.pause(9.5 * 62.5)
-}
-function carregar () {
-    if (bateria < 100 && input.lightLevel() >= 60) {
-        bateria += 1
-    }
-}
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
-
-```
-
-## Passo 27
-
-Duplique a condicional ``||logic:se então||`` e posicione-a embaixo da outra 
-condicional dentro da função ``||functions:carregar||``.
-
-```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-    basic.pause(9.5 * 62.5)
-}
-function carregar () {
-    if (bateria < 100 && input.lightLevel() >= 60) {
-        bateria += 1
-    }
-    if (bateria < 100 && input.lightLevel() >= 60) {
-        bateria += 1
-    }
-}
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
-
-
-```
-
-## Passo 28
-
-Edite o primeiro comparador da segunda condicional para ``||logic:bateria>0||``.
-Modifique o segundo comparador para ``||logic:nível de luz<60||``.
-Por fim, altere o valor do comando de incremento da variável de **1** para **-1**.
-
-```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-    basic.pause(9.5 * 62.5)
-}
-function carregar () {
-    if (bateria < 100 && input.lightLevel() >= 60) {
-        bateria += 1
-    }
-    if (bateria > 0 && input.lightLevel() < 60) {
-        bateria += -1
-    }
-}
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
-```
-
-## Passo 29
-
-No menu ``||functions:Funções||`` arraste os comandos  ``||functions:ligar carregar||`` e ``||functions:ligar atualizar_posição||``
-para dentro do laço ``||basic:sempre||``.
-
-```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-    basic.pause(9.5 * 62.5)
-}
-function carregar () {
-    if (bateria < 100 && input.lightLevel() >= 60) {
-        bateria += 1
-    }
-    if (bateria > 0 && input.lightLevel() < 60) {
-        bateria += -1
-    }
-}
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
-basic.forever(function () {
-    carregar()
-    atualizar_posição()
-})
-
-```
-
-## Passo 30
-
-Na aba ``||basic:Básico||`` arraste outro laço ``||basic:sempre||`` 
-para a área de programação.
-
-```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-    basic.pause(9.5 * 62.5)
-}
-function carregar () {
-    if (bateria < 100 && input.lightLevel() >= 60) {
-        bateria += 1
-    }
-    if (bateria > 0 && input.lightLevel() < 60) {
-        bateria += -1
-    }
-}
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
-basic.forever(function () {
-    carregar()
-    atualizar_posição()
-})
-basic.forever(function () {
-	
-})
-```
-
-## Passo 31
-
-Acesse a categoria ``||logic:Lógica||``, clique na condicional ``||logic:se então senão||``
-e insira-a no novo laço ``||basic:sempre||``.
-
-```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-    basic.pause(9.5 * 62.5)
-}
-function carregar () {
-    if (bateria < 100 && input.lightLevel() >= 60) {
-        bateria += 1
-    }
-    if (bateria > 0 && input.lightLevel() < 60) {
-        bateria += -1
-    }
-}
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
-basic.forever(function () {
-    carregar()
-    atualizar_posição()
-})
-basic.forever(function () {
-    if (true) {
-    	
-    } else {
-    	
-    }
-})
-
-```
-
-## Passo 32
-
-Volte ao menu ``||logic:Lógica||``, pegue o comparador ``||logic:0 < 0||``
-e substitua a condição **verdadeiro** da condicional.
-
-```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-    basic.pause(9.5 * 62.5)
-}
-function carregar () {
-    if (bateria < 100 && input.lightLevel() >= 60) {
-        bateria += 1
-    }
-    if (bateria > 0 && input.lightLevel() < 60) {
-        bateria += -1
-    }
-}
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
-basic.forever(function () {
-    carregar()
-    atualizar_posição()
-})
-basic.forever(function () {
-    if (0 < 0) {
-    	
-    } else {
-    	
-    }
-})
-```
-
-## Passo 33
-
-Agora atualize os campos do comparador. Vá até a aba ``||variables:Variáveis||``,
-clique no bloco ``||variables:bateria||`` e troque 
-o primeiro **0** do comparador. Edite o sinal do comparador para **>**.
-
-```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-    basic.pause(9.5 * 62.5)
-}
-function carregar () {
-    if (bateria < 100 && input.lightLevel() >= 60) {
-        bateria += 1
-    }
-    if (bateria > 0 && input.lightLevel() < 60) {
-        bateria += -1
-    }
-}
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
-basic.forever(function () {
-    carregar()
-    atualizar_posição()
-})
-basic.forever(function () {
-    if (bateria > 0) {
-    	
-    } else {
-    	
-    }
-})
-
-```
-
-## Passo 34
-
-Acesse a categoria ``||logic:Lógica||``, pegue outra condicional ``||logic:se então senão||``
-e insira-a dentro do bloco ``||logic:se bateria > 0 então||``. 
-
-```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-    basic.pause(9.5 * 62.5)
-}
-function carregar () {
-    if (bateria < 100 && input.lightLevel() >= 60) {
-        bateria += 1
-    }
-    if (bateria > 0 && input.lightLevel() < 60) {
-        bateria += -1
-    }
-}
-let bateria = 30
-let x = 3
-let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
-basic.forever(function () {
-    carregar()
-    atualizar_posição()
-})
-basic.forever(function () {
-    if (bateria > 0) {
+        x = Math.round(input.compassHeading())
         if (true) {
         	
         } else {
         	
         }
-    } else {
-    	
     }
 })
+
 ```
 
-## Passo 35
+## Passo 17
 
 Volte ao menu ``||logic:Lógica||``, pegue o comparador ``||logic:0 < 0||``
-e substitua a condição **verdadeiro** da primeira condicional.
+e substitua a condição **verdadeiro** da condicional.
 
 ```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-    basic.pause(9.5 * 62.5)
-}
-function carregar () {
-    if (bateria < 100 && input.lightLevel() >= 60) {
-        bateria += 1
-    }
-    if (bateria > 0 && input.lightLevel() < 60) {
-        bateria += -1
-    }
-}
-let bateria = 30
-let x = 3
+let x = 0
 let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
+Smart.startConstellation()
 basic.forever(function () {
-    carregar()
-    atualizar_posição()
-})
-basic.forever(function () {
-    if (bateria > 0) {
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = Math.round(Math.map(sensors.dimmerValue(InputPorts.P1), 0, 1023, 0, 90))
+        actuators.SetAngleServoKnob(sensors.dimmerValue(InputPorts.P1), OutputPorts.P8)
+    } else {
+        x = Math.round(input.compassHeading())
         if (0 < 0) {
         	
         } else {
         	
         }
-    } else {
-    	
     }
 })
+
 ```
 
-## Passo 36
+## Passo 18
 
 Agora atualize os campos do comparador. Vá até a aba ``||sensors:Sensores||``,
-pegue o bloco ``||sensors:Valor do sensor infravermelho na porta P2||`` e edite o primeiro **0** do comparador.
-Altere a porta de ``||sensors:P2||`` para ``||sensors:P1||``.
-Mude o sinal de **<** para **>** e o segundo valor para **400**.
-
+copie o bloco ``||sensors:Valor do potenciômetro na porta P1||`` e troque 
+o primeiro **0** do comparador.
+Troque o sinal do comparador de **<** para **>** e o segundo valor do comparador para **512**.
 
 ```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-    basic.pause(9.5 * 62.5)
-}
-function carregar () {
-    if (bateria < 100 && input.lightLevel() >= 60) {
-        bateria += 1
-    }
-    if (bateria > 0 && input.lightLevel() < 60) {
-        bateria += -1
-    }
-}
-let bateria = 30
-let x = 3
+let x = 0
 let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
+Smart.startConstellation()
 basic.forever(function () {
-    carregar()
-    atualizar_posição()
-})
-basic.forever(function () {
-    if (bateria > 0) {
-        if (sensors.infraredValue(InputPorts.P1) > 400) {
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = Math.round(Math.map(sensors.dimmerValue(InputPorts.P1), 0, 1023, 0, 90))
+        actuators.SetAngleServoKnob(sensors.dimmerValue(InputPorts.P1), OutputPorts.P8)
+    } else {
+        x = Math.round(input.compassHeading())
+        if (sensors.dimmerValue(InputPorts.P1) > 512) {
         	
         } else {
         	
         }
-    } else {
-    	
     }
 })
-
 ```
 
-## Passo 37
+## Passo 19
 
-Acesse a categoria ``||basic:Básico||``, pegue o comando ``||basic:limpar tela||`` 
-e coloque-o dentro desse novo ``||logic:então||``.
-
-
+Acesse o menu ``||actuators:Atuadores||``, adicione o bloco
+``||actuators:Motor CC, definir direção para Sentido horário na porta P8||``
+dentro desse novo ``||logic:então||``.
+Antes de presseguir, ajuste a porta para ``||actuators:P12||``.
 
 ```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-    basic.pause(9.5 * 62.5)
-}
-function carregar () {
-    if (bateria < 100 && input.lightLevel() >= 60) {
-        bateria += 1
-    }
-    if (bateria > 0 && input.lightLevel() < 60) {
-        bateria += -1
-    }
-}
-let bateria = 30
-let x = 3
+let x = 0
 let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
+Smart.startConstellation()
 basic.forever(function () {
-    carregar()
-    atualizar_posição()
-})
-basic.forever(function () {
-    if (bateria > 0) {
-        if (sensors.infraredValue(InputPorts.P1) > 400) {
-            basic.clearScreen()
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = Math.round(Math.map(sensors.dimmerValue(InputPorts.P1), 0, 1023, 0, 90))
+        actuators.SetAngleServoKnob(sensors.dimmerValue(InputPorts.P1), OutputPorts.P8)
+    } else {
+        x = Math.round(input.compassHeading())
+        if (sensors.dimmerValue(InputPorts.P1) > 512) {
+            actuators.SetDirectionMotor(MotorDirection.clockwise, OutputPorts.P12)
         } else {
         	
         }
-    } else {
-    	
     }
 })
 ```
 
-## Passo 38
+## Passo 20
 
-Vá até o menu ``||led:Led||`` e leve um bloco ``||led:plotar x 0 y 0||`` para dentro desse novo ``||logic:então||``.
-Substitua os valores **0** por ``||variables:x||`` e ``||variables:y||``.
+Copie o bloco
+``||actuators:Motor CC, definir direção para Sentido horário na porta P12||`` e cole-o
+dentro do ``||logic:senão||``.
+Modifique o sentido para ``||actuators:anti-horário||``.
 
 ```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-    basic.pause(9.5 * 62.5)
-}
-function carregar () {
-    if (bateria < 100 && input.lightLevel() >= 60) {
-        bateria += 1
-    }
-    if (bateria > 0 && input.lightLevel() < 60) {
-        bateria += -1
-    }
-}
-let bateria = 30
-let x = 3
+let x = 0
 let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
+Smart.startConstellation()
 basic.forever(function () {
-    carregar()
-    atualizar_posição()
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = Math.round(Math.map(sensors.dimmerValue(InputPorts.P1), 0, 1023, 0, 90))
+        actuators.SetAngleServoKnob(sensors.dimmerValue(InputPorts.P1), OutputPorts.P8)
+    } else {
+        x = Math.round(input.compassHeading())
+        if (sensors.dimmerValue(InputPorts.P1) > 512) {
+            actuators.SetDirectionMotor(MotorDirection.clockwise, OutputPorts.P12)
+        } else {
+            actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P12)
+        }
+    }
 })
+```
+
+## Passo 21
+
+Acesse a categoria ``||logic:Lógica||``, pegue a condicional ``||logic:se então senão||``
+e insira-a **abaixo** do ``||logic:senão||`` mais interno. 
+
+```blocks
+let x = 0
+let y = 0
+Smart.startConstellation()
 basic.forever(function () {
-    if (bateria > 0) {
-        if (sensors.infraredValue(InputPorts.P1) > 400) {
-            basic.clearScreen()
-            led.plot(x, y)
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = Math.round(Math.map(sensors.dimmerValue(InputPorts.P1), 0, 1023, 0, 90))
+        actuators.SetAngleServoKnob(sensors.dimmerValue(InputPorts.P1), OutputPorts.P8)
+    } else {
+        x = Math.round(input.compassHeading())
+        if (sensors.dimmerValue(InputPorts.P1) > 512) {
+            actuators.SetDirectionMotor(MotorDirection.clockwise, OutputPorts.P12)
+        } else {
+            actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P12)
+        }
+        if (true) {
+        	
         } else {
         	
         }
-    } else {
-    	
     }
 })
 ```
 
-## Passo 39
+## Passo 22
 
-Acesse a aba ``||music:Música||`` e adicione o bloco ``||music:play tone C Médio for 1 batida until done||`` 
-dentro da condicional ``||logic:se então||``.
-
+Volte ao menu ``||logic:Lógica||``, pegue o comparador ``||logic:0 = 0||``
+e substitua a condição **verdadeiro** da condicional.
 ```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-    basic.pause(9.5 * 62.5)
-}
-function carregar () {
-    if (bateria < 100 && input.lightLevel() >= 60) {
-        bateria += 1
-    }
-    if (bateria > 0 && input.lightLevel() < 60) {
-        bateria += -1
-    }
-}
-let bateria = 30
-let x = 3
+let x = 0
 let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
+Smart.startConstellation()
 basic.forever(function () {
-    carregar()
-    atualizar_posição()
-})
-basic.forever(function () {
-    if (bateria > 0) {
-        if (sensors.infraredValue(InputPorts.P1) > 400) {
-            basic.clearScreen()
-            led.plot(x, y)
-            music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = Math.round(Math.map(sensors.dimmerValue(InputPorts.P1), 0, 1023, 0, 90))
+        actuators.SetAngleServoKnob(sensors.dimmerValue(InputPorts.P1), OutputPorts.P8)
+    } else {
+        x = Math.round(input.compassHeading())
+        if (sensors.dimmerValue(InputPorts.P1) > 512) {
+            actuators.SetDirectionMotor(MotorDirection.clockwise, OutputPorts.P12)
+        } else {
+            actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P12)
+        }
+        if (0 == 0) {
+        	
         } else {
         	
         }
-    } else {
-    	
     }
 })
+
 ```
+## Passo 23
 
-## Passo 40
+Agora atualize os campos do comparador. Vá até a aba ``||sensors:Sensores||``, 
+selecione o bloco ``||sensors:Valor da chave de fim de curso na porta P2||`` e troque 
+o primeiro **0** do comparador.
+Mude o segundo valor do comparador para **1**.
 
-Na categoria ``||basic:Básico||`` arraste uma pausa ``||basic:pausa (ms) 100||`` para o código,
-depois, mude seu valor para **200**.
 
 ```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-    basic.pause(9.5 * 62.5)
-}
-function carregar () {
-    if (bateria < 100 && input.lightLevel() >= 60) {
-        bateria += 1
-    }
-    if (bateria > 0 && input.lightLevel() < 60) {
-        bateria += -1
-    }
-}
-let bateria = 30
-let x = 3
+let x = 0
 let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
+Smart.startConstellation()
 basic.forever(function () {
-    carregar()
-    atualizar_posição()
-})
-basic.forever(function () {
-    if (bateria > 0) {
-        if (sensors.infraredValue(InputPorts.P1) > 400) {
-            basic.clearScreen()
-            led.plot(x, y)
-            music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
-            basic.pause(200)
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = Math.round(Math.map(sensors.dimmerValue(InputPorts.P1), 0, 1023, 0, 90))
+        actuators.SetAngleServoKnob(sensors.dimmerValue(InputPorts.P1), OutputPorts.P8)
+    } else {
+        x = Math.round(input.compassHeading())
+        if (sensors.dimmerValue(InputPorts.P1) > 512) {
+            actuators.SetDirectionMotor(MotorDirection.clockwise, OutputPorts.P12)
+        } else {
+            actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P12)
+        }
+        if (sensors.endstopValue(InputPorts.P2) == 1) {
+        	
         } else {
         	
         }
-    } else {
-    	
     }
 })
 ```
 
-## Passo 41
+## Passo 24
 
-Volte à aba ``||led:Led||`` e pegue o bloco ``||led:plot bar graph of 0 up to 0||``, posicione-o dentro do ``||logic:senão||`` mais interno.
-Substitua os valores **0** por ``||variables:bateria||`` e **100**.
+
+Acesse o menu ``||actuators:Atuadores||``, adicione o bloco
+``||actuators:Motor CC, definir velocidade na porta P8||``
+dentro desse novo ``||logic:então||``.
+Ajuste a porta para ``||actuators:P16||`` e a velocidade para **150**.
 
 ```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-    basic.pause(9.5 * 62.5)
-}
-function carregar () {
-    if (bateria < 100 && input.lightLevel() >= 60) {
-        bateria += 1
-    }
-    if (bateria > 0 && input.lightLevel() < 60) {
-        bateria += -1
-    }
-}
-let bateria = 30
-let x = 3
+let x = 0
 let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
+Smart.startConstellation()
 basic.forever(function () {
-    carregar()
-    atualizar_posição()
-})
-basic.forever(function () {
-    if (bateria > 0) {
-        if (sensors.infraredValue(InputPorts.P1) > 400) {
-            basic.clearScreen()
-            led.plot(x, y)
-            music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
-            basic.pause(200)
-        } else {
-            led.plotBarGraph(
-            bateria,
-            100
-            )
-        }
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = Math.round(Math.map(sensors.dimmerValue(InputPorts.P1), 0, 1023, 0, 90))
+        actuators.SetAngleServoKnob(sensors.dimmerValue(InputPorts.P1), OutputPorts.P8)
     } else {
-    	
+        x = Math.round(input.compassHeading())
+        if (sensors.dimmerValue(InputPorts.P1) > 512) {
+            actuators.SetDirectionMotor(MotorDirection.clockwise, OutputPorts.P12)
+        } else {
+            actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P12)
+        }
+        if (sensors.endstopValue(InputPorts.P2) == 1) {
+            actuators.SetSpeedMotor(150, OutputPorts.P16)
+        } else {
+        	
+        }
     }
 })
 ```
 
-## Passo 42
 
-No outro ``||logic:senão||`` coloque um comando ``||basic:mostrar ícone||``, que pode ser retirado da categoria
-``||basic:Básico||``. Altere o ícone do coração para **"X"**.
+## Passo 25
+
+Volte à seção ``||actuators:Atuadores||`` e arraste o comando ``||actuators:Motor CC, parar motor na porta P8||``
+para dentro do ``||logic:senão||``.
+Edite a porta de ``||actuators:P8||`` para ``||actuators:P16||``.
 
 ```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-    basic.pause(9.5 * 62.5)
-}
-function carregar () {
-    if (bateria < 100 && input.lightLevel() >= 60) {
-        bateria += 1
-    }
-    if (bateria > 0 && input.lightLevel() < 60) {
-        bateria += -1
-    }
-}
-let bateria = 30
-let x = 3
+let x = 0
 let y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
+Smart.startConstellation()
 basic.forever(function () {
-    carregar()
-    atualizar_posição()
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = Math.round(Math.map(sensors.dimmerValue(InputPorts.P1), 0, 1023, 0, 90))
+        actuators.SetAngleServoKnob(sensors.dimmerValue(InputPorts.P1), OutputPorts.P8)
+    } else {
+        x = Math.round(input.compassHeading())
+        if (sensors.dimmerValue(InputPorts.P1) > 512) {
+            actuators.SetDirectionMotor(MotorDirection.clockwise, OutputPorts.P12)
+        } else {
+            actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P12)
+        }
+        if (sensors.endstopValue(InputPorts.P2) == 1) {
+            actuators.SetSpeedMotor(150, OutputPorts.P16)
+        } else {
+            actuators.StopMotor(OutputPorts.P16)
+        }
+    }
+})
+
+
+```
+
+
+## Passo 26
+
+Vá até o menu ``||basic:Básico||`` e puxe outro laço ``||basic:sempre||`` para a área de programação. 
+
+```blocks
+let x = 0
+let y = 0
+Smart.startConstellation()
+basic.forever(function () {
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = Math.round(Math.map(sensors.dimmerValue(InputPorts.P1), 0, 1023, 0, 90))
+        actuators.SetAngleServoKnob(sensors.dimmerValue(InputPorts.P1), OutputPorts.P8)
+    } else {
+        x = Math.round(input.compassHeading())
+        if (sensors.dimmerValue(InputPorts.P1) > 512) {
+            actuators.SetDirectionMotor(MotorDirection.clockwise, OutputPorts.P12)
+        } else {
+            actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P12)
+        }
+        if (sensors.endstopValue(InputPorts.P2) == 1) {
+            actuators.SetSpeedMotor(150, OutputPorts.P16)
+        } else {
+            actuators.StopMotor(OutputPorts.P16)
+        }
+    }
 })
 basic.forever(function () {
-    if (bateria > 0) {
-        if (sensors.infraredValue(InputPorts.P1) > 400) {
-            basic.clearScreen()
-            led.plot(x, y)
-            music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
-            basic.pause(200)
-        } else {
-            led.plotBarGraph(
-            bateria,
-            100
-            )
-        }
+	
+})
+```
+
+## Passo 27
+
+Clique no menu ``||Advanced:Avançado||``, acesse ``||serial:Serial||`` e 
+insira **três** blocos ``||serial:serial gravar linha ""||`` 
+no laço ``||basic:sempre||`` que está vazio.
+
+```blocks
+let x = 0
+let y = 0
+Smart.startConstellation()
+basic.forever(function () {
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = Math.round(Math.map(sensors.dimmerValue(InputPorts.P1), 0, 1023, 0, 90))
+        actuators.SetAngleServoKnob(sensors.dimmerValue(InputPorts.P1), OutputPorts.P8)
     } else {
-        basic.showIcon(IconNames.No)
+        x = Math.round(input.compassHeading())
+        if (sensors.dimmerValue(InputPorts.P1) > 512) {
+            actuators.SetDirectionMotor(MotorDirection.clockwise, OutputPorts.P12)
+        } else {
+            actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P12)
+        }
+        if (sensors.endstopValue(InputPorts.P2) == 1) {
+            actuators.SetSpeedMotor(150, OutputPorts.P16)
+        } else {
+            actuators.StopMotor(OutputPorts.P16)
+        }
     }
+})
+basic.forever(function () {
+    serial.writeLine("")
+    serial.writeLine("")
+    serial.writeLine("")
 })
 
 ```
 
-## Passo 43
+## Passo 28
+
+Clique no menu ``||Advanced:Avançado||``, acesse ``||text:Texto||`` e 
+busque **dois** blocos ``||text:unir Olá Mundo - +||`` para substituir
+os campos **""** dos **dois** primeiros registros de linha serial.
+
+```blocks
+let x = 0
+let y = 0
+Smart.startConstellation()
+basic.forever(function () {
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = Math.round(Math.map(sensors.dimmerValue(InputPorts.P1), 0, 1023, 0, 90))
+        actuators.SetAngleServoKnob(sensors.dimmerValue(InputPorts.P1), OutputPorts.P8)
+    } else {
+        x = Math.round(input.compassHeading())
+        if (sensors.dimmerValue(InputPorts.P1) > 512) {
+            actuators.SetDirectionMotor(MotorDirection.clockwise, OutputPorts.P12)
+        } else {
+            actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P12)
+        }
+        if (sensors.endstopValue(InputPorts.P2) == 1) {
+            actuators.SetSpeedMotor(150, OutputPorts.P16)
+        } else {
+            actuators.StopMotor(OutputPorts.P16)
+        }
+    }
+})
+basic.forever(function () {
+    serial.writeLine("Olá" + "Mundo")
+    serial.writeLine("Olá" + "Mundo")
+    serial.writeLine("")
+})
+```
+## Passo 29
+
+Em seguida, atualize os campos de texto para nossa aplicação:
+O primeiro bloco deve registrar **"x: "** e ``||variables:x||``
+e o segundo **"y: "** e ``||variables:y||``.
+```blocks
+let x = 0
+let y = 0
+Smart.startConstellation()
+basic.forever(function () {
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = Math.round(Math.map(sensors.dimmerValue(InputPorts.P1), 0, 1023, 0, 90))
+        actuators.SetAngleServoKnob(sensors.dimmerValue(InputPorts.P1), OutputPorts.P8)
+    } else {
+        x = Math.round(input.compassHeading())
+        if (sensors.dimmerValue(InputPorts.P1) > 512) {
+            actuators.SetDirectionMotor(MotorDirection.clockwise, OutputPorts.P12)
+        } else {
+            actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P12)
+        }
+        if (sensors.endstopValue(InputPorts.P2) == 1) {
+            actuators.SetSpeedMotor(150, OutputPorts.P16)
+        } else {
+            actuators.StopMotor(OutputPorts.P16)
+        }
+    }
+})
+basic.forever(function () {
+    serial.writeLine("x:" + x)
+    serial.writeLine("y:" + y)
+    serial.writeLine("")
+})
+```
+
+## Passo 30
+
+Acesse mais uma vez o menu ``||smart:Smart||``, pegue o comando
+``||smart:Buscar constelação em x 0 y 0||`` e substitua o espaço vazio para gravar linha
+do terceiro bloco serial.
+Modifique os valores do comando para as variáveis ``||variables:x||`` e ``||variables:y||`` nesta ordem.
+
+
+```blocks
+let x = 0
+let y = 0
+Smart.startConstellation()
+basic.forever(function () {
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = Math.round(Math.map(sensors.dimmerValue(InputPorts.P1), 0, 1023, 0, 90))
+        actuators.SetAngleServoKnob(sensors.dimmerValue(InputPorts.P1), OutputPorts.P8)
+    } else {
+        x = Math.round(input.compassHeading())
+        if (sensors.dimmerValue(InputPorts.P1) > 512) {
+            actuators.SetDirectionMotor(MotorDirection.clockwise, OutputPorts.P12)
+        } else {
+            actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P12)
+        }
+        if (sensors.endstopValue(InputPorts.P2) == 1) {
+            actuators.SetSpeedMotor(150, OutputPorts.P16)
+        } else {
+            actuators.StopMotor(OutputPorts.P16)
+        }
+    }
+})
+basic.forever(function () {
+    serial.writeLine("x:" + x)
+    serial.writeLine("y:" + y)
+    serial.writeLine(Smart.findConstellation(x, y))
+})
+```
+
+## Passo 31
+
+Na categoria ``||basic:Básico||``, arraste uma pausa ``||basic:pausa (ms) 100||`` para o código e
+altere sua duração para **1000**.
+
+
+```blocks
+let x = 0
+let y = 0
+Smart.startConstellation()
+basic.forever(function () {
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = Math.round(Math.map(sensors.dimmerValue(InputPorts.P1), 0, 1023, 0, 90))
+        actuators.SetAngleServoKnob(sensors.dimmerValue(InputPorts.P1), OutputPorts.P8)
+    } else {
+        x = Math.round(input.compassHeading())
+        if (sensors.dimmerValue(InputPorts.P1) > 512) {
+            actuators.SetDirectionMotor(MotorDirection.clockwise, OutputPorts.P12)
+        } else {
+            actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P12)
+        }
+        if (sensors.endstopValue(InputPorts.P2) == 1) {
+            actuators.SetSpeedMotor(150, OutputPorts.P16)
+        } else {
+            actuators.StopMotor(OutputPorts.P16)
+        }
+    }
+})
+basic.forever(function () {
+    serial.writeLine("x:" + x)
+    serial.writeLine("y:" + y)
+    serial.writeLine(Smart.findConstellation(x, y))
+    basic.pause(1000)
+})
+```
+
+## Passo 32
 
 Agora seu código está pronto! Baixe-o para o micro:bit e teste-o.
-Ao ligar o projeto, observe o movimento circular da estação espacial, ao aproximar algo do sensor infravermelho um alerta é emitido com a posição
-do "asteroide" indicada no display. Se a tela mostrar o ícone **X** é porque a carga chegou ao final, direcione uma fonte de luz para o micro:bit para carregar o sistema.
+Use a chave de fim de curso e o potenciômetro para direcionar o telescópio, no simulador do MakeCode confira o nome da constelação vista no momento.
 ```blocks
 ```
-
-
-## Passo 44
+## Passo 33
 Se necessário, confira o seu código clicando na lâmpada de dica.
 
 ```blocks
-function atualizar_posição () {
-    if (y == 0 && x != 4) {
-        x += 1
-    } else if (x == 4 && y != 4) {
-        y += 1
-    } else if (y == 4 && x != 0) {
-        x += -1
-    } else if (y == 0 && x != 0) {
-        y += -1
-    }
-    basic.pause(9.5 * 62.5)
-}
-function carregar () {
-    if (bateria < 100 && input.lightLevel() >= 60) {
-        bateria += 1
-    }
-    if (bateria > 0 && input.lightLevel() < 60) {
-        bateria += -1
-    }
-}
-let bateria = 30
-let x = 3
+let x = 0
 let y = 0
-y = 0
-actuators.SetSpeedMotor(400, OutputPorts.P12)
+Smart.startConstellation()
 basic.forever(function () {
-    carregar()
-    atualizar_posição()
-})
-basic.forever(function () {
-    if (bateria > 0) {
-        if (sensors.infraredValue(InputPorts.P1) > 400) {
-            basic.clearScreen()
-            led.plot(x, y)
-            music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
-            basic.pause(200)
-        } else {
-            led.plotBarGraph(
-            bateria,
-            100
-            )
-        }
+    if (sensors.buttonValue(InputPorts.P0) == 0) {
+        y = Math.round(Math.map(sensors.dimmerValue(InputPorts.P1), 0, 1023, 0, 90))
+        actuators.SetAngleServoKnob(sensors.dimmerValue(InputPorts.P1), OutputPorts.P8)
     } else {
-        basic.showIcon(IconNames.No)
+        x = Math.round(input.compassHeading())
+        if (sensors.dimmerValue(InputPorts.P1) > 512) {
+            actuators.SetDirectionMotor(MotorDirection.clockwise, OutputPorts.P12)
+        } else {
+            actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P12)
+        }
+        if (sensors.endstopValue(InputPorts.P2) == 1) {
+            actuators.SetSpeedMotor(150, OutputPorts.P16)
+        } else {
+            actuators.StopMotor(OutputPorts.P16)
+        }
     }
 })
+basic.forever(function () {
+    serial.writeLine("x:" + x)
+    serial.writeLine("y:" + y)
+    serial.writeLine(Smart.findConstellation(x, y))
+    basic.pause(1000)
+})
+
+
 ```
 
 
