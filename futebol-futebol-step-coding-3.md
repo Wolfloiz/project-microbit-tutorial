@@ -776,7 +776,5 @@ basic.showIcon(IconNames.Square)
 
 ```package
 radio=remove
-ws2812b=remove
 bluetooth
-fuzzyBot=github:FuzzyMakers/pxt-fuzzyMakers
 ```
