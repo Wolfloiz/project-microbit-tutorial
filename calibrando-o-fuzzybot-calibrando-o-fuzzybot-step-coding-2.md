@@ -1,6 +1,10 @@
 ### @diffs true
 # Calibrando o FuzzyBot
 
+```ghost
+fuzzyBot.writeLED(fuzzyBot.LED.LEDLeft, fuzzyBot.LEDswitch.turnOn)
+```
+
 ## Passo 1
 
 Neste tutorial, vamos criar um código para calibrar os sensores infravermelhos 
@@ -8,8 +12,9 @@ do FuzzyBot. Para isso, vamos utilizar os LEDs laterais e a matriz de LEDs do
 micro:bit para responderem ao valor de cada um dos três sensores infravermelhos 
 localizados na parte de baixo do chassi do FuzzyBot. 
 
-**Obs.:** Caso necessário, utilize a **lâmpada** próxima a seleção de passos do 
-tutorial para vizualizar o código durante a construção.
+**Obs.:** Caso necessário, utilize a 
+**lâmpada** próxima a seleção de passos do tutorial para vizualizar o código 
+durante a construção.
 
 ```blocks
 ```
@@ -485,4 +490,3 @@ funcionamento correto nas superfícies em que a calibração está sendo realiza
 ```package
 fuzzyBot=github:FuzzyMakers/pxt-fuzzyMakers
 ```
-
