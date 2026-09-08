@@ -51,7 +51,7 @@ basic.forever(function () {
 ```
 
 ## Passo 6
-Prosseguindo para dentro do ``||logic:então||``, insira o comando ``||music:stop all sounds||`` presente na categoria
+Prosseguindo para dentro do ``||logic:então||``, insira o comando ``||music:parar todos os sons||`` presente na categoria
 ``||music:Música||``.   
 
 ```blocks
@@ -88,7 +88,7 @@ basic.forever(function () {
 ```
 
 ## Passo 9
-Em seguida, acesse a aba ``||led:Led||`` e adicione o bloco ``||led:plot bar graph of 0 up to 0||`` ainda dentro 
+Em seguida, acesse a aba ``||led:Led||`` e adicione o bloco ``||led:plotar gráfico de barras de 0 até 0||`` ainda dentro 
 do ``||logic:então||``. 
 
 ```blocks
@@ -209,7 +209,7 @@ basic.forever(function () {
 ```
 
 ## Passo 15
-Também teremos o bloco ``||led:plot bar graph of 0 up to 0||``, mas com o bloco 
+Também teremos o bloco ``||led:plotar gráfico de barras de 0 até 0||``, mas com o bloco 
 ``||sensors:Valor do sensor infravermelho na porta P2||`` no lugar do ``||input:nível de luz||``.
 O segundo campo pode ser mantido com o valor **100**.
 
@@ -237,7 +237,7 @@ basic.forever(function () {
 
 ## Passo 16
 Retorne ao menu ``||logic:Lógica||``, e adicione um bloco ``||logic:se então senão||`` ainda dentro do antigo ``||logic:então||``,
-imediatamente abaixo do bloco ``||led:plot bar graph||``.
+imediatamente abaixo do bloco ``||led:plotar gráfico de barras||``.
 
 ```blocks
 basic.forever(function () {
@@ -391,7 +391,7 @@ basic.forever(function () {
 ```
 
 ## Passo 21
-Por fim, adicione o comando ``||music:stop all sounds||`` dentro do ``||logic:senão||``.
+Por fim, adicione o comando ``||music:parar todos os sons||`` dentro do ``||logic:senão||``.
 Ele também está localizado no menu ``||music:Música||``.
 
 ```blocks

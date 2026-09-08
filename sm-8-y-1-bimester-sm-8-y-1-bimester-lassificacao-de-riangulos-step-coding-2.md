@@ -198,7 +198,7 @@ basic.forever(function () {
 ```
 
 ## Passo 14
-Exatamente abaixo desse bloco, adicione um ``||music:play tone C Médio for 1 batida until done||``
+Exatamente abaixo desse bloco, adicione um ``||music:jogar toque C Médio para 1 batida até o fim||``
 localizado na aba ``||music:Música||``. Assim finalizamos o bloco ``||loops:repetir 3 vezes||``. 
 
 ```blocks
@@ -430,8 +430,8 @@ basic.forever(function () {
 
 ## Passo 23
 Depois de definidos os testes condicionais, prossiga para o ``||logic:então||``.
-Adicione um comando ``||basic:mostrar string "Hello!"||``, localizado na aba ``||basic:Básico||``.
-Altere o texto a ser exibido de *"Hello!"* para *Obtusângulo*.
+Adicione um comando ``||basic:mostrar string "Olá!"||``, localizado na aba ``||basic:Básico||``.
+Altere o texto a ser exibido de *"Olá!"* para *Obtusângulo*.
 
 ```blocks
 let angulos: number[] = []

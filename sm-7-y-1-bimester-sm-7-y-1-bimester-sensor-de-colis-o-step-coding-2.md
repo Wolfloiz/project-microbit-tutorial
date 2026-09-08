@@ -313,7 +313,7 @@ basic.forever(function () {
 ```
 
 ## Passo 17
-Prosseguindo para dentro do ``||logic:senão||``, adicione um bloco ``||music:stop all sounds||``, 
+Prosseguindo para dentro do ``||logic:senão||``, adicione um bloco ``||music:parar todos os sons||``, 
 localizado na categoria ``||music:Música||``.
 
 ```blocks

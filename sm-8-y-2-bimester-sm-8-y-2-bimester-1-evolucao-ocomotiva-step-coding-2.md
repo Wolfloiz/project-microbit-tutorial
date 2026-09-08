@@ -76,7 +76,7 @@ loops.everyInterval(5000, function () {
 
 ## Passo 9
 Acesse a categoria ``||music:Música||`` e insira o bloco 
-``||music:play tone C Médio for 1 batida until done||`` dentro do laço
+``||music:jogar toque C Médio para 1 batida até o fim||`` dentro do laço
 ``||Loops:repetir 2 vezes executar||``.
 
 ```blocks

@@ -106,7 +106,7 @@ basic.forever(function () {
 ```
 
 ## Passo 9
-Volte à seção ``||math:Matemática||`` e selecione o comando ``||math:map 0 from low 0 high 1023 to low 0 high 4||``.
+Volte à seção ``||math:Matemática||`` e selecione o comando ``||math:mapear 0 de baixo 0 de alto 1023 até baixo 0 até alto 4||``.
 Substitua o **0** de ``||math:arredonda 0||`` por esse novo bloco.
 ```blocks
 let y = 0
@@ -122,7 +122,7 @@ basic.forever(function () {
 ```
 
 ## Passo 10
-Atualize os valores do ``||math:map||``.
+Atualize os valores do ``||math:mapear||``.
 Volte ao menu ``||sensors:Sensores||``, pegue o bloco ``||sensors:Valor do potenciômetro na porta P2||`` e troque
 o primeiro campo **0** do mapeamento.
 Mude a porta de ``||sensors:P2||`` para ``||sensors:P1||``.

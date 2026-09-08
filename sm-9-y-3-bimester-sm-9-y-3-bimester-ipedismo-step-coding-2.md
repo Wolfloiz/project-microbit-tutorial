@@ -24,7 +24,7 @@ let velocidade = 0
 
 
 ## Passo 4
-Vá até a aba ``||led:Led||``, clique no bloco ``||led:plot bar graph of 0 up to 0||`` 
+Vá até a aba ``||led:Led||``, clique no bloco ``||led:plotar gráfico de barras de 0 até 0||`` 
 e insira-o no laço ``||basic:sempre||``.
 ```blocks
 let velocidade = 0

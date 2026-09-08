@@ -111,8 +111,8 @@ actuators.SetAngleServoKnob(0, OutputPorts.P8)
 ```
 
 ## Passo 10
-Acesse a categoria ``||logic:Lógica||``, pegue a condicional ``||logic:se então senão||``
-e insira-a dentro da função ``||functions:desviar||``. 
+Acesse a categoria ``||logic:Lógica||``, pegue a condicional ``||logic:se então||``
+e insira-a dentro do laço ``||basic:sempre||``. 
 Clique no botão **+** para criar mais uma condição ``||logic:senão se||``. 
 
 ```blocks
@@ -508,7 +508,7 @@ basic.forever(function () {
 ```
 
 ## Passo 24
-Acesse a aba ``||music:Música||`` e adicione o bloco ``||music:play tone C Medio for 1 batida until done||`` 
+Acesse a aba ``||music:Música||`` e adicione o bloco ``||music:jogar toque C Medio para 1 batida até o fim||`` 
 dentro da condicional ``||logic:se então||``.
 Edite o tom de ``||music:C Médio||`` para ``||music:B Agudo||`` selecionando a tecla correspondente 
 e coloque o som para tocar por **2 batidas**.

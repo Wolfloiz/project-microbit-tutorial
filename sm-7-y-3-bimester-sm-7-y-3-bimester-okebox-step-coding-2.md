@@ -1,6 +1,10 @@
 ### @diffs true
 # Jukebox
 
+```ghost
+music.playMelody(music.stringPlayable("", 120), music.PlaybackMode.UntilDone)
+```
+
 ## Passo 1
 Neste tutorial, vamos programar o jukebox para que ele toque várias músicas. 
 O Bit Botão será responsável por ligar e desligar a jukebox. Ao ligá-la, a música
@@ -73,7 +77,7 @@ basic.forever(function () {
 
 ## Passo 8
 Acesse a categoria ``||math:Matemática||`` e insira o bloco 
-``||math:map 0 from low 0 high 1023 to low 0 high 4||`` dentro do comando 
+``||math:mapear 0 de baixo 0 de alto 1023 até baixo 0 até alto 4||`` dentro do comando 
 ``||music:definir volume 127||``, substituindo o valor **127**.
 
 ```blocks
@@ -88,7 +92,7 @@ basic.forever(function () {
 ## Passo 9
 Vá ao menu ``||sensors:Sensores||`` e utilize o bloco 
 ``||sensors:Valor do potenciômetro na porta P2||`` para substituir o primeiro 
-**0** do comando ``||math:map||``.
+**0** do comando ``||math:mapear||``.
 
 ```blocks
 let musica = 1
@@ -198,7 +202,7 @@ basic.forever(function () {
 
 ## Passo 16
 Retorne à categoria ``||music:Música||`` e insira o bloco 
-``||music:stop all sounds||`` dentro do ``||logic:então||``.
+``||music:parar todos os sons||`` dentro do ``||logic:então||``.
 
 ```blocks
 let musica = 1
@@ -757,7 +761,7 @@ basic.forever(function () {
 
 ## Passo 33
 Acesse a categoria ``||music:Música||`` e adicione um comando 
-``||music:play melody at tempo 120 (bpm) until done||`` dentro de cada 
+``||music:jogar melodia ao ritmo 120 até o fim||`` dentro de cada 
 ``||logic:então||``.
 
 ```blocks
@@ -799,7 +803,7 @@ basic.forever(function () {
 
 ## Passo 34
 Agora, vamos definir as melodias de cada caso. Clique nos retângulos 
-do primeiro bloco ``||music:play melody||`` para abrir o quadro do editor 
+do primeiro bloco ``||music:jogar melodia||`` para abrir o quadro do editor 
 de melodias. Esse editor é dividido em colunas, que são tocadas em sequência. 
 Cada linha dessas colunas representa uma nota, que pode ser selecionada ao 
 clicar sobre seu quadrado correspondente.
@@ -853,7 +857,7 @@ basic.forever(function () {
 ```
 
 ## Passo 35
-Agora, clique nos retângulos do segundo bloco ``||music:play melody||`` 
+Agora, clique nos retângulos do segundo bloco ``||music:jogar melodia||`` 
 para abrir o quadro do editor de melodias. A melodia que devemos programar 
 segue o seguinte padrão:
 
@@ -905,7 +909,7 @@ basic.forever(function () {
 ```
 
 ## Passo 36
-Por fim, clique nos retângulos do terceiro bloco ``||music:play melody||`` 
+Por fim, clique nos retângulos do terceiro bloco ``||music:jogar melodia||`` 
 para abrir o quadro do editor de melodias. A melodia que devemos programar 
 segue o seguinte padrão:
 

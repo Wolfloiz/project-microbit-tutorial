@@ -60,7 +60,7 @@ basic.forever(function () {
 ```
 
 ## Passo 7
-Retorne à ``||math:Matemática||`` e insira o bloco ``||math:map 0 from low 0 high 1023 to low 0 high 4||``
+Retorne à ``||math:Matemática||`` e insira o bloco ``||math:mapear 0 de baixo 0 de alto 1023 até baixo 0 até alto 4||``
 dentro do bloco ``||math:arredonda||``.
 
 ```blocks
@@ -72,9 +72,9 @@ basic.forever(function () {
 ```
 
 ## Passo 8
-Vamos preencher os campos desse bloco ``||math:map||``. Primeiramente,
+Vamos preencher os campos desse bloco ``||math:mapear||``. Primeiramente,
 acesse o menu ``||sensors:Sensores||`` e adicione o bloco ``||sensors:Valor do potenciômetro na porta P2||``
-no primeiro campo, substituindo o **0**. Em seguida, altere o último campo (``||math:high||``)
+no primeiro campo, substituindo o **0**. Em seguida, altere o último campo (``||math:até alto||``)
 de **4** para **9**.
 
 ```blocks
@@ -86,7 +86,7 @@ basic.forever(function () {
 ```
 
 ## Passo 9
-Esse bloco ``||math:map||`` vai transformar a posição do potenciômetro em um número de **0** a **9**.
+Esse bloco ``||math:mapear||`` vai transformar a posição do potenciômetro em um número de **0** a **9**.
 Então, devemos exibir esse número para o usuário conseguir definir a senha. Para isso,
 acesse a aba ``||basic:Básico||`` e adicione o bloco ``||basic:mostrar número 0||`` ainda dentro do laço ``||basic:sempre||``.
 

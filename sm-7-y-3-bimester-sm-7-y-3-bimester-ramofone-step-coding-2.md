@@ -1,6 +1,10 @@
 ### @diffs true
 # Gramofone
 
+```ghost
+music.playMelody(music.stringPlayable("", 120), music.PlaybackMode.UntilDone)
+```
+
 ## Passo 1
 Neste tutorial, vamos programar o protótipo do gramofone para reproduzir músicas.
 A chave fim de curso deve fazer o motor CC girar o disco. Enquanto isso, 
@@ -236,7 +240,7 @@ basic.forever(function () {
 
 ## Passo 16
 Acesse a categoria ``||music:Música||`` e insira o bloco 
-``||music:stop all sounds||`` dentro do ``||logic:então||``.
+``||music:parar todos os sons||`` dentro do ``||logic:então||``.
 
 ```blocks
 let girando = 0
@@ -476,7 +480,7 @@ basic.forever(function () {
 
 ## Passo 25
 Dentro do ``||logic:então||``, adicione um bloco 
-``||music:play melody at tempo 120 bpm until done||``, localizado na aba 
+``||music:jogar melodia ao ritmo 120 até o fim||``, localizado na aba 
 ``||music:Música||``.
 
 ```blocks

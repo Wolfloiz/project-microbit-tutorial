@@ -764,7 +764,7 @@ basic.forever(function () {
 
 ## Passo 24
 Vá ao menu ``||music:Música||`` e insira o bloco 
-``||music:play tone C Médio for 1 batida until done||`` dentro do 
+``||music:jogar toque C Médio para 1 batida até o fim||`` dentro do 
 ``||loops:executar||``. 
 
 ```blocks
@@ -810,8 +810,8 @@ basic.forever(function () {
 ## Passo 25
 Vá a **Avançado** e acesse o menu ``||matrix:Matriz||``. Selecione o bloco
 de bordas arredondadas ``||matrix:lista obter valor em 0||``. Ele deve ser
-inserido dentro do campo **C Médio** do bloco ``||music:play tone||``.
- **Atenção:** não substitua o bloco maior ``||music:tone||``, apenas o campo
+inserido dentro do campo **C Médio** do bloco ``||music:jogar toque||``.
+ **Atenção:** não substitua o bloco maior ``||music:toque||``, apenas o campo
  em branco onde está escrito **C Médio**.
 
 ```blocks

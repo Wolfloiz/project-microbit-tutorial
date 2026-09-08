@@ -194,7 +194,7 @@ basic.forever(function () {
 
 ## Passo 12
 Acesse a categoria ``||led:Led||`` e adicione o bloco 
-``||led:plot bar graph of 0 up to 0||`` dentro do ``||Logic:senão||``.
+``||led:plotar gráfico de barras de 0 até 0||`` dentro do ``||Logic:senão||``.
 
 ```blocks
 let opção = 0

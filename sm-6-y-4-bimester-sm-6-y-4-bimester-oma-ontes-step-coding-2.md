@@ -203,7 +203,7 @@ basic.forever(function () {
 
 ## Passo 16
 Acesse a categoria ``||music:Música||`` e adicione o bloco 
-``||music:stop all sounds||`` dentro do ``||logic:então||``.
+``||music:parar todos os sons||`` dentro do ``||logic:então||``.
 
 ```blocks
 basic.forever(function () {

@@ -22,7 +22,6 @@ basic.forever(function () {
 })
 ```
 
-
 ## Passo 4
 Vá à categoria ``||math:Matemática||``, pegue o bloco ``||math:arredonda 0||``
 e substitua o valor **0** na definição da variável.
@@ -35,7 +34,7 @@ basic.forever(function () {
 
 ## Passo 5
 
-Volte à aba ``||math:Matemática||``, pegue o bloco ``||math:map 0 from low 0 high 1023 to low 0 high 4||``
+Volte à aba ``||math:Matemática||``, pegue o bloco ``||math:mapear 0 de baixo 0 de alto 1023 até baixo 0 até alto 4||``
 e edite o valor **0** da operação ``||math:arredonda 0||``.
 ```blocks
 let profundidade = 0
@@ -48,14 +47,14 @@ basic.forever(function () {
 Agora atualize os valores do mapeamento. Acesse a categoria ``||sensors:Sensores||`` e atualize o primeiro campo com
 o bloco ``||sensors:Valor do sensor infravermelho na porta P2||``. 
 Edite a porta de ``||sensors:P2||`` para ``||sensors:P1||``.
-Modifique o último campo de **4** para **250**.
+Modifique o penúltimo campo de **0** para **400** e o último campo de **4** para **0**.
 
 
 
 ```blocks
 let profundidade = 0
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
 })
 ```
 
@@ -66,7 +65,7 @@ e insira-a dentro do bloco ``||basic:sempre||``.
 ```blocks
 let profundidade = 0
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
     if (true) {
     	
     } else {
@@ -83,14 +82,13 @@ e substitua a condição **verdadeiro** da condicional.
 ```blocks
 let profundidade = 0
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
     if (0 == 0) {
     	
     } else {
     	
     }
 })
-
 ```
 
 ## Passo 9
@@ -101,7 +99,7 @@ o primeiro **0** do comparador.
 ```blocks
 let profundidade = 0
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
     if (sensors.buttonValue(InputPorts.P2) == 0) {
     	
     } else {
@@ -113,16 +111,14 @@ basic.forever(function () {
 ## Passo 10
 Acesse a categoria ``||logic:Lógica||``, pegue outra condicional ``||logic:se então senão||``
 e insira-a dentro do bloco ``||logic:se Valor do Botão na porta P2 = 0 então||``. 
-Clique **duas** vezes no botão **+** para criar mais duas condições.
+Clique uma vez no botão **+** para criar mais uma condição.
 
 ```blocks
 let profundidade = 0
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
     if (sensors.buttonValue(InputPorts.P2) == 0) {
         if (true) {
-        	
-        } else if (false) {
         	
         } else if (false) {
         	
@@ -145,11 +141,9 @@ e substitua a condição **verdadeiro** da primeira condicional.
 ```blocks
 let profundidade = 0
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
     if (sensors.buttonValue(InputPorts.P2) == 0) {
         if (0 < 0) {
-        	
-        } else if (false) {
         	
         } else if (false) {
         	
@@ -166,16 +160,14 @@ basic.forever(function () {
 
 Agora atualize os campos do comparador. Vá até a aba ``||variables:Variáveis||``,
 pegue o bloco ``||variables:profundidade||`` e edite o primeiro **0** do comparador.
-Mude o sinal de **<** para **>** e o segundo valor para **200**.
+Mude o sinal de < para > e o segundo valor para **300**.
 
 ```blocks
 let profundidade = 0
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
     if (sensors.buttonValue(InputPorts.P2) == 0) {
-        if (profundidade > 200) {
-        	
-        } else if (false) {
+        if (profundidade > 300) {
         	
         } else if (false) {
         	
@@ -190,20 +182,17 @@ basic.forever(function () {
 
 ## Passo 13
 
-Copie e cole duas vezes o comparador ``||logic:profundidade > 200||`` e altere 
-as duas condicionais seguintes ``||logic:falso||`` utilizando os 
-valores após o sinal de **100** e **50** respectivamente.
+Copie e cole o comparador ``||logic:profundidade > 300||`` e altere 
+a segunda condicional ``||logic:falso||`` alterando o valor de **300** para **100**.
 
 ```blocks
 let profundidade = 0
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
     if (sensors.buttonValue(InputPorts.P2) == 0) {
-        if (profundidade > 200) {
+        if (profundidade > 300) {
         	
         } else if (profundidade > 100) {
-        	
-        } else if (profundidade > 50) {
         	
         } else {
         	
@@ -212,25 +201,22 @@ basic.forever(function () {
     	
     }
 })
-
 ```
 ## Passo 14
 
-Acesse a categoria ``||basic:Básico||``, preencha as quatro condições com o bloco ``||basic:mostrar string "Hello"||``.
+Acesse a categoria ``||basic:Básico||``, preencha as três condições com o bloco ``||basic:mostrar string "Olá!"||``.
 
 ```blocks
 let profundidade = 0
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
     if (sensors.buttonValue(InputPorts.P2) == 0) {
-        if (profundidade > 200) {
-            basic.showString("Hello!")
+        if (profundidade > 300) {
+            basic.showString("Olá!")
         } else if (profundidade > 100) {
-            basic.showString("Hello!")
-        } else if (profundidade > 50) {
-            basic.showString("Hello!")
+            basic.showString("Olá!")
         } else {
-            basic.showString("Hello!")
+            basic.showString("Olá!")
         }
     } else {
     	
@@ -240,19 +226,17 @@ basic.forever(function () {
 
 ## Passo 15
 
-Edite os textos para os nomes dos minérios na sequência: "cobre", "ferro", "ouro" e "bauxita".
+Edite os textos para os nomes dos minérios na sequência: "cobre", "ferro" e "bauxita".
 
 ```blocks
 let profundidade = 0
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
     if (sensors.buttonValue(InputPorts.P2) == 0) {
-        if (profundidade > 200) {
+        if (profundidade > 300) {
             basic.showString("cobre")
         } else if (profundidade > 100) {
             basic.showString("ferro")
-        } else if (profundidade > 50) {
-            basic.showString("ouro")
         } else {
             basic.showString("bauxita")
         }
@@ -271,14 +255,12 @@ Mude o valor do número para a variável ``||variables:profundidade||``.
 ```blocks
 let profundidade = 0
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
     if (sensors.buttonValue(InputPorts.P2) == 0) {
-        if (profundidade > 200) {
+        if (profundidade > 300) {
             basic.showString("cobre")
         } else if (profundidade > 100) {
             basic.showString("ferro")
-        } else if (profundidade > 50) {
-            basic.showString("ouro")
         } else {
             basic.showString("bauxita")
         }
@@ -295,14 +277,12 @@ Vá até o menu ``||basic:Básico||`` e puxe outro laço ``||basic:sempre||`` pa
 ```blocks
 let profundidade = 0
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
     if (sensors.buttonValue(InputPorts.P2) == 0) {
-        if (profundidade > 200) {
+        if (profundidade > 300) {
             basic.showString("cobre")
         } else if (profundidade > 100) {
             basic.showString("ferro")
-        } else if (profundidade > 50) {
-            basic.showString("ouro")
         } else {
             basic.showString("bauxita")
         }
@@ -313,7 +293,6 @@ basic.forever(function () {
 basic.forever(function () {
 	
 })
-
 ```
 
 ## Passo 18
@@ -324,14 +303,12 @@ Clique no botão **+** para criar mais uma condição.
 ```blocks
 let profundidade = 0
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
     if (sensors.buttonValue(InputPorts.P2) == 0) {
-        if (profundidade > 200) {
+        if (profundidade > 300) {
             basic.showString("cobre")
         } else if (profundidade > 100) {
             basic.showString("ferro")
-        } else if (profundidade > 50) {
-            basic.showString("ouro")
         } else {
             basic.showString("bauxita")
         }
@@ -342,7 +319,7 @@ basic.forever(function () {
 basic.forever(function () {
     if (true) {
     	
-    } else if (false) {
+    } else if (true) {
     	
     } else {
     	
@@ -359,14 +336,12 @@ blocos, altere a segunda condição para ``||input:botão B é pressionado||``.
 ```blocks
 let profundidade = 0
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
     if (sensors.buttonValue(InputPorts.P2) == 0) {
-        if (profundidade > 200) {
+        if (profundidade > 300) {
             basic.showString("cobre")
         } else if (profundidade > 100) {
             basic.showString("ferro")
-        } else if (profundidade > 50) {
-            basic.showString("ouro")
         } else {
             basic.showString("bauxita")
         }
@@ -383,8 +358,8 @@ basic.forever(function () {
     	
     }
 })
-
 ```
+
 ## Passo 20
 Acesse o menu ``||actuators:Atuadores||``, adicione os blocos
 ``||actuators:Motor CC, definir velocidade 0 na porta P8||``
@@ -394,14 +369,12 @@ dentro do ``||logic:se botão A é pressionado então||``.
 ```blocks
 let profundidade = 0
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
     if (sensors.buttonValue(InputPorts.P2) == 0) {
-        if (profundidade > 200) {
+        if (profundidade > 300) {
             basic.showString("cobre")
         } else if (profundidade > 100) {
             basic.showString("ferro")
-        } else if (profundidade > 50) {
-            basic.showString("ouro")
         } else {
             basic.showString("bauxita")
         }
@@ -419,7 +392,6 @@ basic.forever(function () {
     	
     }
 })
-
 ```
 
 ## Passo 21
@@ -431,14 +403,12 @@ Selecione o sentido ``||actuators:anti-horário||``, no segundo bloco e a porta 
 ```blocks
 let profundidade = 0
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
     if (sensors.buttonValue(InputPorts.P2) == 0) {
-        if (profundidade > 200) {
+        if (profundidade > 300) {
             basic.showString("cobre")
         } else if (profundidade > 100) {
             basic.showString("ferro")
-        } else if (profundidade > 50) {
-            basic.showString("ouro")
         } else {
             basic.showString("bauxita")
         }
@@ -466,14 +436,12 @@ Altere o sentido de ``||actuators:anti-horário||`` para  ``||actuators:horário
 ```blocks
 let profundidade = 0
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
     if (sensors.buttonValue(InputPorts.P2) == 0) {
-        if (profundidade > 200) {
+        if (profundidade > 300) {
             basic.showString("cobre")
         } else if (profundidade > 100) {
             basic.showString("ferro")
-        } else if (profundidade > 50) {
-            basic.showString("ouro")
         } else {
             basic.showString("bauxita")
         }
@@ -502,14 +470,12 @@ para dentro do ``||logic:senão||``. Mude a porta de ``||actuators:P8||`` para  
 ```blocks
 let profundidade = 0
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
     if (sensors.buttonValue(InputPorts.P2) == 0) {
-        if (profundidade > 200) {
+        if (profundidade > 300) {
             basic.showString("cobre")
         } else if (profundidade > 100) {
             basic.showString("ferro")
-        } else if (profundidade > 50) {
-            basic.showString("ouro")
         } else {
             basic.showString("bauxita")
         }
@@ -539,14 +505,12 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 	
 })
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
     if (sensors.buttonValue(InputPorts.P2) == 0) {
-        if (profundidade > 200) {
+        if (profundidade > 300) {
             basic.showString("cobre")
         } else if (profundidade > 100) {
             basic.showString("ferro")
-        } else if (profundidade > 50) {
-            basic.showString("ouro")
         } else {
             basic.showString("bauxita")
         }
@@ -582,14 +546,12 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     }
 })
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
     if (sensors.buttonValue(InputPorts.P2) == 0) {
-        if (profundidade > 200) {
+        if (profundidade > 300) {
             basic.showString("cobre")
         } else if (profundidade > 100) {
             basic.showString("ferro")
-        } else if (profundidade > 50) {
-            basic.showString("ouro")
         } else {
             basic.showString("bauxita")
         }
@@ -611,16 +573,56 @@ basic.forever(function () {
 ```
 
 ## Passo 26
+
+Volte ao menu ``||logic:Lógica||``, pegue o comparador ``||logic:0 = 0||``
+e substitua a condição **verdadeiro** da condicional.
+
+```blocks
+let profundidade = 0
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    if (0 == 0) {
+    	
+    } else {
+    	
+    }
+})
+basic.forever(function () {
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
+    if (sensors.buttonValue(InputPorts.P2) == 0) {
+        if (profundidade > 300) {
+            basic.showString("cobre")
+        } else if (profundidade > 100) {
+            basic.showString("ferro")
+        } else {
+            basic.showString("bauxita")
+        }
+    } else {
+        basic.showNumber(profundidade)
+    }
+})
+basic.forever(function () {
+    if (input.buttonIsPressed(Button.A)) {
+        actuators.SetSpeedMotor(1023, OutputPorts.P16)
+        actuators.SetDirectionMotor(MotorDirection.antiClockwise, OutputPorts.P12)
+    } else if (input.buttonIsPressed(Button.B)) {
+        actuators.SetSpeedMotor(1023, OutputPorts.P16)
+        actuators.SetDirectionMotor(MotorDirection.clockwise, OutputPorts.P12)
+    } else {
+        actuators.StopMotor(OutputPorts.P16)
+    }
+})
+```
+
+## Passo 27
 Agora atualize os campos do comparador.
 Acesse o menu ``||variables:Variáveis||`` e clique em 
 **"Fazer uma variável..."**. Crie uma variável chamada
 ``||variables:broca||``. Substitua o primeiro valor do comparador pela variável criada.
 
-
 ```blocks
-let broca = 0
 let profundidade = 0
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    let broca = 0
     if (broca == 0) {
     	
     } else {
@@ -628,14 +630,12 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     }
 })
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
     if (sensors.buttonValue(InputPorts.P2) == 0) {
-        if (profundidade > 200) {
+        if (profundidade > 300) {
             basic.showString("cobre")
         } else if (profundidade > 100) {
             basic.showString("ferro")
-        } else if (profundidade > 50) {
-            basic.showString("ouro")
         } else {
             basic.showString("bauxita")
         }
@@ -657,7 +657,7 @@ basic.forever(function () {
 ```
 
 
-## Passo 27
+## Passo 28
 Volte à aba ``||variables:Variáveis||`` e busque o comando  ``||variables:definir broca para 0||``
 para usá-lo dentro da condição ``||logic:se broca = 0 então||``.
 Modifique o valor de ``||variables:broca||`` para **1**.
@@ -673,14 +673,12 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     }
 })
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
     if (sensors.buttonValue(InputPorts.P2) == 0) {
-        if (profundidade > 200) {
+        if (profundidade > 300) {
             basic.showString("cobre")
         } else if (profundidade > 100) {
             basic.showString("ferro")
-        } else if (profundidade > 50) {
-            basic.showString("ouro")
         } else {
             basic.showString("bauxita")
         }
@@ -701,7 +699,7 @@ basic.forever(function () {
 })
 ```
 
-## Passo 28
+## Passo 29
 
 Acesse a aba ``||actuators:Atuadores||`` e adicione o bloco
 ``||actuators:Motor CC, definir velocidade 0 na porta P8||`` abaixo do último bloco adicionado.
@@ -719,14 +717,12 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     }
 })
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
     if (sensors.buttonValue(InputPorts.P2) == 0) {
-        if (profundidade > 200) {
+        if (profundidade > 300) {
             basic.showString("cobre")
         } else if (profundidade > 100) {
             basic.showString("ferro")
-        } else if (profundidade > 50) {
-            basic.showString("ouro")
         } else {
             basic.showString("bauxita")
         }
@@ -746,7 +742,7 @@ basic.forever(function () {
     }
 })
 ```
-## Passo 29
+## Passo 30
 
 Acesse o menu ``||variables:Variáveis||``, pegue o comando ``||variables:definir broca para 0||``
 e use-o dentro do ``||logic:senão||``.
@@ -763,14 +759,12 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     }
 })
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
     if (sensors.buttonValue(InputPorts.P2) == 0) {
-        if (profundidade > 200) {
+        if (profundidade > 300) {
             basic.showString("cobre")
         } else if (profundidade > 100) {
             basic.showString("ferro")
-        } else if (profundidade > 50) {
-            basic.showString("ouro")
         } else {
             basic.showString("bauxita")
         }
@@ -789,13 +783,13 @@ basic.forever(function () {
         actuators.StopMotor(OutputPorts.P16)
     }
 })
-
 ```
 
-## Passo 30
+## Passo 31
 
 Volte para a aba ``||actuators:Atuadores||``, busque o comando ``||actuators:Motor CC, parar motor na porta P8||``
 e coloque-o no fim da condicional.
+
 ```blocks
 let broca = 0
 let profundidade = 0
@@ -809,14 +803,12 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     }
 })
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
     if (sensors.buttonValue(InputPorts.P2) == 0) {
-        if (profundidade > 200) {
+        if (profundidade > 300) {
             basic.showString("cobre")
         } else if (profundidade > 100) {
             basic.showString("ferro")
-        } else if (profundidade > 50) {
-            basic.showString("ouro")
         } else {
             basic.showString("bauxita")
         }
@@ -835,17 +827,14 @@ basic.forever(function () {
         actuators.StopMotor(OutputPorts.P16)
     }
 })
-
 ```
-## Passo 31
+## Passo 32
 
 Agora seu código está pronto! Baixe-o para o micro:bit e teste-o. Use os botões A e B do micro:bit para avançar e recuar a broca,
 com a broca posicionada, ao pressionar o logotipo, será iniciada a perfuração. Alterne o clique sobre o Bit Botão para observar a profundidade e o minério extraído no display.
-```blocks
-```
 
 
-## Passo 32
+## Passo 33
 Se necessário, confira o seu código clicando na lâmpada de dica.
 
 ```blocks
@@ -861,16 +850,14 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     }
 })
 basic.forever(function () {
-    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 0, 250))
+    profundidade = Math.round(Math.map(sensors.infraredValue(InputPorts.P1), 0, 1023, 400, 0))
     if (sensors.buttonValue(InputPorts.P2) == 0) {
-        if (profundidade > 200) {
+        if (profundidade > 300) {
             basic.showString("cobre")
         } else if (profundidade > 100) {
             basic.showString("ferro")
-        } else if (profundidade > 50) {
-            basic.showString("ouro")
         } else {
-            basic.showString("bauxita")
+            basic.showString("Bauxita")
         }
     } else {
         basic.showNumber(profundidade)
@@ -887,11 +874,7 @@ basic.forever(function () {
         actuators.StopMotor(OutputPorts.P16)
     }
 })
-
-
 ```
-
-
 
 ```package
 fuzzyBot=github:FuzzyMakers/pxt-fuzzyMakers

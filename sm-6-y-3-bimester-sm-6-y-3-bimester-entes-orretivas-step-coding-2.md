@@ -128,18 +128,18 @@ basic.forever(function () {
 
 ## Passo 9
 Clique nos LEDs que devem acender no bloco ``||basic:mostrar leds||`` para exibir
-uma letra **"O"**. Em seguida, altere a duração da ``||basic:pausa||`` de 
+uma letra **"C"**. Em seguida, altere a duração da ``||basic:pausa||`` de 
 **100ms** para **2000ms** (2 segundos).
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -161,11 +161,11 @@ Agora, dentro do ``||logic:senão||``, também adicione os três comandos
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -188,28 +188,28 @@ basic.forever(function () {
 
 ## Passo 11
 Edite quais LEDs devem acender no bloco ``||basic:mostrar leds||`` para exibir
-uma letra **"I"**. Em seguida, altere a duração da ``||basic:pausa||`` de 
+uma letra **"D"**. Em seguida, altere a duração da ``||basic:pausa||`` de 
 **100ms** para **2000ms** (2 segundos).
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -229,21 +229,21 @@ desse bloco para alterar de ``||input:botão A||`` para ``||input:botão B||``.
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -265,21 +265,21 @@ dentro desse novo bloco ``||input:no botão B pressionado||``.
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -306,21 +306,21 @@ Retorne à ``||logic:Lógica||`` e utilize o bloco comparador
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -347,21 +347,21 @@ valor **0** no primeiro campo do comparador.
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -387,21 +387,21 @@ seguida, altere o segundo campo do comparador de **0** para **250**.
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -427,21 +427,21 @@ Feito isso, adicione um comando ``||basic:mostrar string||`` dentro do
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -460,28 +460,28 @@ basic.forever(function () {
 ```
 
 ## Passo 18
-Modifique os textos exibidos de **"Hello!"** para **"Hipermetropia"** dentro do
+Modifique os textos exibidos de **"Olá!"** para **"Hipermetropia"** dentro do
 ``||logic:então||`` e **"Miopia"** dentro do ``||logic:senão||``. 
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -510,21 +510,21 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -557,21 +557,21 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -605,21 +605,21 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -657,21 +657,21 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -707,21 +707,21 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -740,8 +740,7 @@ basic.forever(function () {
 ```
 
 ## Passo 24
-Acesse o menu ``||music:Música||`` e adicione o bloco  
-``||music:play risadinha until done||`` dentro do ``||logic:então||``. Clique
+Acesse o menu ``||music:Música||`` e adicione o bloco ``||music:jogar risadinha até o fim||`` dentro do ``||logic:então||``. Clique
 na seta para alterar a canção de **risadinha** para **feliz**.
 
 ```blocks
@@ -758,21 +757,21 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -811,21 +810,21 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -846,7 +845,7 @@ basic.forever(function () {
 ## Passo 26
 Dentro do ``||logic:senão||``, insira os mesmos comandos que programamos no 
 ``||logic:então||``: ``||basic:mostrar ícone||``, 
-``||music:play risadinha until done||``, ``||basic:pausa (ms)||`` e 
+``||music:jogar risadinha até o fim||``, ``||basic:pausa (ms)||`` e 
 ``||basic:limpar tela||``. 
 
 ```blocks
@@ -868,21 +867,21 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -923,21 +922,21 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -979,21 +978,21 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -1039,21 +1038,21 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -1100,21 +1099,21 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -1161,21 +1160,21 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -1220,21 +1219,21 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -1280,21 +1279,21 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -1345,21 +1344,21 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -1411,21 +1410,21 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -1475,21 +1474,21 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -1540,21 +1539,21 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -1604,21 +1603,21 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -1669,21 +1668,21 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -1735,21 +1734,21 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()
@@ -1808,21 +1807,21 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 input.onButtonPressed(Button.A, function () {
     if (sensors.dimmerValue(InputPorts.P1) <= 500) {
         basic.showLeds(`
-            . . # . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . # . .
+           . . # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . . # # .
             `)
         basic.pause(2000)
         basic.clearScreen()
     } else {
         basic.showLeds(`
-            . # # # .
-            . . # . .
-            . . # . .
-            . . # . .
-            . # # # .
+            . # # . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # . .
             `)
         basic.pause(2000)
         basic.clearScreen()

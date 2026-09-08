@@ -37,7 +37,7 @@ dentro do bloco ``||input:no botão A pressionado||``.
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
-    basic.showString("Hello!")
+    basic.showString("Olá!")
 })
 input.onButtonPressed(Button.B, function () {
 	
@@ -50,7 +50,7 @@ basic.forever(function () {
 ## Passo 5
 Clique em **Avançado** para abrir novas categorias. Clique em ``||text:Texto||``
 e selecione o comando ``||text:unir "Olá" "Mundo"||`` para substituir o texto 
-"Hello" do bloco ``||basic:mostrar string||``.
+"Olá" do bloco ``||basic:mostrar string||``.
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -215,13 +215,13 @@ input.onButtonPressed(Button.A, function () {
 })
 input.onButtonPressed(Button.B, function () {
     if (sensors.dimmerValue(InputPorts.P2) > 1000) {
-        basic.showString("Hello!")
+        basic.showString("Olá!")
     } else if (sensors.dimmerValue(InputPorts.P2) > 600) {
-        basic.showString("Hello!")
+        basic.showString("Olá!")
     } else if (sensors.dimmerValue(InputPorts.P2) > 100) {
-        basic.showString("Hello!")
+        basic.showString("Olá!")
     } else if (sensors.dimmerValue(InputPorts.P2) > 40) {
-        basic.showString("Hello!")
+        basic.showString("Olá!")
     } else {
     	
     }
@@ -233,7 +233,7 @@ basic.forever(function () {
 ```
 
 ## Passo 13
-Em seguida, modifique as palavras exibidas de **"Hello"** para as respectivas strings:
+Em seguida, modifique as palavras exibidas de **"Olá"** para as respectivas strings:
 - **Bactérias**;
 - **Hemáceas**;
 - **Amebas**;
@@ -348,7 +348,7 @@ basic.forever(function () {
 
 ## Passo 17
 Acesse a categoria ``||math:Matemática||`` e utilize o bloco 
-``||math:map 0 from low 0 high 1023 to low 0 high 4||`` para substituir o campo
+``||math:mapear 0 de baixo 0 de alto 1023 até baixo 0 até alto 4||`` para substituir o campo
 do valor de posição do bloco ``||actuators:Servo, definir posição||``. 
 
 ```blocks
@@ -375,7 +375,7 @@ basic.forever(function () {
 ```
 
 ## Passo 18
-Agora, vamos editar os campos desse bloco ``||math:Map||``. Comece acessando 
+Agora, vamos editar os campos desse bloco ``||math:mapear||``. Comece acessando 
 a categoria ``||sensors:Sensores||`` e selecionando o bloco 
 ``||sensors:Valor do potenciômetro na porta P2||`` para substituir o primeiro
 campo com o valor **0**.
@@ -404,7 +404,7 @@ basic.forever(function () {
 ```
 
 ## Passo 19
-Feito isso, altere os dois últimos campos do comando ``||math:Map||`` de 
+Feito isso, altere os dois últimos campos do comando ``||math:mapear||`` de 
 **0** e **4** para **140** e **530**.
 
 ```blocks

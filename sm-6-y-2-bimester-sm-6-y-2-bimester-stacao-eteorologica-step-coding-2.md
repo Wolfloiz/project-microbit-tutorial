@@ -104,7 +104,7 @@ basic.forever(function () {
 
 ## Passo 8
 Vá à categoria ``||led:Led||`` e insira o bloco 
-``||led:plot bar graph of 0 up to 0||`` dentro do outro bloco 
+``||led:plotar gráfico de barras de 0 até 0||`` dentro do outro bloco 
 ``||input:no botão B pressionado||``.
 
 ```blocks
@@ -127,7 +127,7 @@ basic.forever(function () {
 ## Passo 9
 Volte à ``||input:Entrada||`` e selecione o bloco
 ``||input:nível de luz||`` para substituir o primeiro valor **0** do bloco
-``||led:plot bar graph of 0 up to 0||``.
+``||led:plotar gráfico de barras de 0 até 0||``.
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -147,7 +147,7 @@ basic.forever(function () {
 ```
 
 ## Passo 10
-Altere o segundo valor **0** desse bloco ``||led:plot bar graph of 0 up to 0||``
+Altere o segundo valor **0** desse bloco ``||led:plotar gráfico de barras de 0 até 0||``
 para **255**.
 
 ```blocks
@@ -218,7 +218,7 @@ basic.forever(function () {
 
 ## Passo 13
 Dentro do ``||loops:executar||``, adicione outro 
-``||led:plot bar graph of 0 up to 0||``.
+``||led:plotar gráfico de barras de 0 até 0||``.
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -245,7 +245,7 @@ basic.forever(function () {
 ## Passo 14
 Clique na aba ``||sensors:Sensores||`` e selecione o bloco 
 ``||sensors:Valor do sensor de som na porta P2||`` para substituir o primeiro
-valor **0** do bloco ``||led:plot bar graph||``.
+valor **0** do bloco ``||led:plotar gráfico de barras||``.
 
 ```blocks
 input.onButtonPressed(Button.A, function () {

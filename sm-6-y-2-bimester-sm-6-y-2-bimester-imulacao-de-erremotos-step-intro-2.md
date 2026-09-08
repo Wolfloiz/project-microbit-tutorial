@@ -46,7 +46,7 @@ basic.forever(function () {
 
 ## Passo 6
 Acesse o menu ``||math:Matemática||`` e utilize o bloco
-``||math:map 0 from low 0 high 1023 to low 0 high 4||`` 
+``||math:mapear 0 de baixo 0 de alto 1023 até baixo 0 até alto 4||`` 
 para substituir o valor **100** dentro do bloco ``||basic:pausa||``.
 
 ```blocks
@@ -59,7 +59,7 @@ basic.forever(function () {
 ## Passo 7
 Clique na aba ``||sensors:Sensores||`` e insira o bloco 
 ``||sensors:Valor do potenciômetro na porta P2||`` no primeiro campo 
-do bloco ``||math:map||`` substituindo o valor **0**.
+do bloco ``||math:mapear||`` substituindo o valor **0**.
 
 ```blocks
 basic.forever(function () {
@@ -94,7 +94,7 @@ basic.forever(function () {
 
 ## Passo 10
 Abaixo desse bloco, teremos outro comando de ``||basic:pausa||`` com o 
-``||math:map||`` dentro, idêntico ao anterior. 
+``||math:mapear||`` dentro, idêntico ao anterior. 
 
 **Dica:** Para facilitar, você pode duplicar o anterior, 
 mantendo-o pressionado para abrir as opções de duplicação.

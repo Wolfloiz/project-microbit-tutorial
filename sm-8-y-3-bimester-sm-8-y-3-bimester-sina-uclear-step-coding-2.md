@@ -1,6 +1,10 @@
 ### @diffs true
 # Energia Nuclear
 
+```ghost
+music.playMelody(music.stringPlayable("", 120), music.PlaybackMode.UntilDone)
+```
+
 ## Passo 1
 Neste tutorial, vamos programar a usina nuclear em que o micro:bit atuará como 
 reator e medirá o calor gerado através da luminosidade detectada. O motor 
@@ -272,7 +276,7 @@ basic.forever(function () {
 
 ## Passo 18
 Acesse a categoria ``||music:Música||`` e adicione um comando 
-``||music:play melody at tempo 120 (bpm) until done||`` dentro do 
+``||music:jogar melodia ao ritmo 120 até o fim||`` dentro do 
 ``||logic:então||``.
 
 ```blocks
@@ -295,8 +299,8 @@ basic.forever(function () {
 ```
 
 ## Passo 19
-Altere o tempo desse bloco de **120 bpm** para **400 bpm** e clique na seta 
-para alterar o modo de reprodução de **until done** para **looping in background**.
+Altere o tempo desse bloco de **120** para **400** e clique na seta 
+para alterar o modo de reprodução de **até o fim** para **em segundo plano**.
 
 ```blocks
 basic.forever(function () {
@@ -320,7 +324,7 @@ basic.forever(function () {
 ## Passo 20
 Agora, vamos definir qual melodia deve tocar, ou seja, o som do alarme. 
 Clique nos retângulos 
-do bloco ``||music:play melody||`` para abrir o quadro do editor 
+do bloco ``||music:jogar melodia||`` para abrir o quadro do editor 
 de melodias. Esse editor é dividido em colunas, que são tocadas em sequência. 
 Cada linha dessas colunas representa uma nota, que pode ser selecionada ao 
 clicar sobre seu quadrado correspondente.
@@ -383,7 +387,7 @@ basic.forever(function () {
 
 ## Passo 22
 Prosseguindo ao ``||logic:senão||``, retorne à categoria ``||music:Música||`` 
-e insira o bloco ``||music:stop all sounds||`` dentro do ``||logic:senão||``.
+e insira o bloco ``||music:parar todos os sons||`` dentro do ``||logic:senão||``.
 
 ```blocks
 basic.forever(function () {
@@ -406,8 +410,8 @@ basic.forever(function () {
 ```
 
 ## Passo 23
-Clique no menu ``||leds:Led||`` e adicione o bloco 
-``||leds:plot bar graph of 0 up to 0||`` dentro do ``||logic:senão||``.
+Clique no menu ``||led:Led||`` e adicione o bloco 
+``||led:plotar gráfico de barras de 0 até 0||`` dentro do ``||logic:senão||``.
 
 ```blocks
 basic.forever(function () {
@@ -436,7 +440,7 @@ basic.forever(function () {
 ## Passo 24
 Acesse a categoria ``||input:Entrada||`` e utilize o bloco  
 ``||input:nível de luz||`` para substituir o primeiro campo de valor **0** desse
-comando ``||leds:plot bar graph||``.
+comando ``||led:plotar gráfico de barras||``.
 
 ```blocks
 basic.forever(function () {

@@ -128,17 +128,7 @@ function chuveiro () {
     	
     }
 }
-basic.forever(function () {
-	
-})
-```function abastecer () {
-    music.stopAllSounds()
-    actuators.StopMotor(OutputPorts.P8)
-    while (sensors.endstopValue(InputPorts.P2) == 1) {
-        music.play(music.createSoundExpression(WaveShape.Sine, 188, 584, 255, 0, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), music.PlaybackMode.UntilDone)
-    }
-}
-let consumo = 100 + (20 * input.temperature() + 15 * input.lightLevel())
+```
 
 
 ## Passo 10

@@ -1128,7 +1128,7 @@ basic.forever(function () {
 
 ## Passo 39
 
-Acesse a aba ``||music:Música||`` e adicione o bloco ``||music:play tone C Médio for 1 batida until done||`` 
+Acesse a aba ``||music:Música||`` e adicione o bloco ``||music:jogar toque C Médio para 1 batida até o fim||`` 
 dentro da condicional ``||logic:se então||``.
 
 ```blocks
@@ -1227,7 +1227,7 @@ basic.forever(function () {
 
 ## Passo 41
 
-Volte à aba ``||led:Led||`` e pegue o bloco ``||led:plot bar graph of 0 up to 0||``, posicione-o dentro do ``||logic:senão||`` mais interno.
+Volte à aba ``||led:Led||`` e pegue o bloco ``||led:plotar gráfico de barras de 0 até 0||``, posicione-o dentro do ``||logic:senão||`` mais interno.
 Substitua os valores **0** por ``||variables:bateria||`` e **100**.
 
 ```blocks

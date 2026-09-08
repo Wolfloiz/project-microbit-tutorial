@@ -130,7 +130,7 @@ basic.showIcon(IconNames.SmallSquare)
 
 
 ## Passo 11
-Acesse a aba ``||music:Música||`` e posicione o bloco ``||music:play tone C Médio for 1 batida until done||`` 
+Acesse a aba ``||music:Música||`` e posicione o bloco ``||music:jogar toque C Médio para 1 batida até o fim||`` 
 abaixo do último comando adicionado.
 
 ```blocks
@@ -188,7 +188,7 @@ basic.showIcon(IconNames.SmallSquare)
 
 ## Passo 14
 
-Copie o comando ``||music:play tone C Médio for 1 batida until done||`` e cole-o 
+Copie o comando ``||music:jogar toque C Médio para 1 batida até o fim||`` e cole-o 
 depois do loop. Altere o número de ``||music:batidas||`` para **2**.
 ```blocks
 function contagem_regressiva () {

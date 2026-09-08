@@ -76,7 +76,7 @@ let consumo = 100 + (20 * input.temperature() + 15 * input.lightLevel())
 ```
 
 ## Passo 9
-Acesse a aba ``||music:Música||`` e adicione o bloco ``||music:stop all sounds||`` 
+Acesse a aba ``||music:Música||`` e adicione o bloco ``||music:parar todos os sons||`` 
 dentro dessa função ``||functions:abastecer||``.
 
 ```blocks
@@ -150,7 +150,7 @@ let consumo = 100 + (20 * input.temperature() + 15 * input.lightLevel())
 
 ## Passo 14
 
-Acesse a categoria ``||music:Múscia||`` e busque pelo comando ``||music:play (onda sonora) until done||`` 
+Acesse a categoria ``||music:Música||`` e busque pelo comando ``||music:jogar (onda sonora) até o fim||`` 
 para inseri-lo no laço. 
 Clique na onda sonora, edite a duração para **200 ms** e a frequência para começar próxima de **200 Hz** e terminar próxima de **600 Hz**.
 
@@ -367,7 +367,7 @@ consumo = 100 + (20 * input.temperature() + 15 * input.lightLevel())
 ```
 
 ## Passo 23
-Acesse a aba ``||music:Música||`` e adicione o bloco ``||music:stop all sounds||`` 
+Acesse a aba ``||music:Música||`` e adicione o bloco ``||music:parar todos os sons||`` 
 dentro da condicional ``||logic:se água > consumo||``.
 
 ```blocks
@@ -1126,7 +1126,7 @@ let consumo = 0
 ```
 ## Passo 41
 
-Vá até a aba ``||led:Led||``, clique no bloco ``||led:plot bar graph of 0 up to 0||`` 
+Vá até a aba ``||led:Led||``, clique no bloco ``||led:plotar gráfico de barras de 0 até 0||`` 
 e insira-o no laço ``||basic:sempre||``.
 
 ```blocks
@@ -1180,7 +1180,7 @@ let consumo = 0
 
 ## Passo 42
 
-Em seguida, atualize os campos do bloco ``||led:plot bar graph||``. Na categoria ``||variables:Variáveis||``
+Em seguida, atualize os campos do bloco ``||led:plotar gráfico de barras||``. Na categoria ``||variables:Variáveis||``
 pegue a variável ``||variables:água||`` e coloque-a no primeiro campo. Finalmente, atualize o valor do segundo campo para **10000**.
 
 ```blocks
@@ -1292,9 +1292,9 @@ let agua_distribuída = 0
 let água = 0
 let consumo = 0
 ```
- 
+
+
+
 ```package
 fuzzyBot=github:FuzzyMakers/pxt-fuzzyMakers
 ```
-
-

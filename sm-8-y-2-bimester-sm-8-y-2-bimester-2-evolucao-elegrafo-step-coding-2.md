@@ -87,7 +87,7 @@ basic.forever(function () {
 
 ## Passo 8
 Retorne à categoria ``||music:Música||`` e insira o bloco 
-``||music:stop all sounds||`` dentro do ``||logic:senão||``.
+``||music:parar todos os sons||`` dentro do ``||logic:senão||``.
 
 ```blocks
 basic.forever(function () {

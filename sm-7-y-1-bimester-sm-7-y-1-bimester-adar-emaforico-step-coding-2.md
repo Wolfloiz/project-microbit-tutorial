@@ -121,7 +121,7 @@ basic.forever(function () {
 ```
 
 ## Passo 10
-Em seguida, acesse a categoria ``||music:Música||`` e adicione o comando ``||music:stop all sounds||``
+Em seguida, acesse a categoria ``||music:Música||`` e adicione o comando ``||music:parar todos os sons||``
 abaixo do ``||basic:mostrar ícone||``. 
 
 ```blocks
@@ -164,7 +164,7 @@ basic.forever(function () {
 ```
 
 ## Passo 12
-Abaixo desse bloco, adicione outro ``||music:stop all sounds||`` localizado na aba ``||music:Música||``.
+Abaixo desse bloco, adicione outro ``||music:parar todos os sons||`` localizado na aba ``||music:Música||``.
 
 ```blocks
 let semaforo = 1
@@ -333,7 +333,7 @@ basic.forever(function () {
 ```
 
 ## Passo 18
-Agora, dentro do ``||Logic:senão||`` desse bloco, adicione o comando ``||music:stop all sounds||``, também do menu ``||music:Música||``. 
+Agora, dentro do ``||Logic:senão||`` desse bloco, adicione o comando ``||music:parar todos os sons||``, também do menu ``||music:Música||``. 
 
 ```blocks
 let semaforo = 1
